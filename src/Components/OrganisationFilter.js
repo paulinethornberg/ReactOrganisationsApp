@@ -34,7 +34,9 @@ class OrganisationFilter extends Component {
   render() {
     let locations = this.state.locations;
     let categories = this.state.categories;
+    // console.log(categories[0]);
     let filter = this.state.filter;
+    // console.log(filter);
 
     return (
       <aside className="col-md-4 col-lg-2 product-filter">
@@ -92,6 +94,17 @@ const CategoryFilter = (props) => {
 }
 
 const CategoryFilterItem = (props) => {
+//   let subFilterItems = [];
+//   subFilterItems = props.category.terms.map((category) => {
+//     return ( 
+//       <CategorySubFilterItem category ={category} filter={props.filter} key={category.codename} />
+//     );
+// });
+let categories = props.category.terms;
+console.log(categories);
+console.log(props.filter);
+
+  // console.log(props);
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let onChange = () => {
@@ -103,7 +116,22 @@ const CategoryFilterItem = (props) => {
     <span className="checkbox js-postback">
       <input id={codename} type="checkbox" checked={checked} onChange={onChange}/>
       <label htmlFor={codename}>{props.category.name}</label>
+      <SubCategoryFilter categories={categories} filter={props.filter}/>
     </span>
+    
+  );
+}
+const SubCategoryFilter = (props) => {
+  let filterItems = props.categories.map((category) => {
+    return (
+      <CategoryFilterItem category={category} filter={props.filter} key={category.codename}/>
+    );
+  });
+
+  return (
+    <div className ="subcategories">
+      {filterItems}
+    </div>
   );
 }
 

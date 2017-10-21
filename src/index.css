@@ -332,6 +332,9 @@ h5,
     line-height: 1.4;
     color: inherit;
 }
+.subcategories{
+  margin-left: 25px;
+}
 p {
     margin: 0 0 0.625rem;
     margin-bottom: 0.7rem;

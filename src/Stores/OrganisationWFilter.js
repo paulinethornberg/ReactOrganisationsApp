@@ -6,6 +6,7 @@ let organisationDetails = {};
 let organisationListCapacity = 0;
 let locations = [];
 let categories = [];
+// let subcategories = [];
 
 let notifyChange = () => {
   changeListeners.forEach((listener) => {
@@ -50,6 +51,9 @@ let fetchCategories = () => {
     .get()
     .subscribe(response => {
       categories = response.terms;
+      // if (categories.terms.length > 0) {
+      //   subcategories = categories.terms;
+      // }
       notifyChange();
     });
 }
@@ -58,6 +62,7 @@ export class Filter {
   constructor() {
     this.locations = [];
     this.categories = [];
+    // this.subcategories = [];
   }
 
   matches(organisation) {
