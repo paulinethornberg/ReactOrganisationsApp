@@ -100,18 +100,14 @@ const CategoryFilterItem = (props) => {
 //       <CategorySubFilterItem category ={category} filter={props.filter} key={category.codename} />
 //     );
 // });
-let categories = props.category.terms;
-console.log(categories);
-console.log(props.filter);
+  let categories = props.category.terms;
 
-  // console.log(props);
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let onChange = () => {
     props.filter.toggleCategory(codename);
     OrganisationWFilterStore.setFilter(props.filter);
   }
-
   return (
     <span className="checkbox js-postback">
       <input id={codename} type="checkbox" checked={checked} onChange={onChange}/>
