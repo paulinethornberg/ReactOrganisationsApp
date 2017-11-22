@@ -5735,7 +5735,7 @@ footer {
 }
 /*# Home banner #*/
 .banner-section {
-    min-height: 500px;
+    /*min-height: 500px;*/
     width: 100%;
     padding: 10.5rem 1.5rem 1.8rem 1.5rem;
     background-size: cover;

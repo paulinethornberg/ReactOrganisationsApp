@@ -5,8 +5,9 @@ import BackgroundImage from '../Images/header.png';
 const Header = () => {
   return (
     <header className="header" role="banner">
-     <section className="banner-section" style={{ backgroundImage: "url(" + BackgroundImage + ")" }}>
-    </section>
+    {/*  <section className="banner-section" style={{ backgroundImage: "url(" + BackgroundImage + ")" }}>
+      </section>
+      */}
       <div className="menu">
         <div className="container">
           <nav role="navigation">

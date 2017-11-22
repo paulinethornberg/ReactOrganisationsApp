@@ -9,7 +9,7 @@ const Articles = (props) => {
           <div className="store-menu-list row">
             <ul>
               <li>
-                <Link to="/store/organisationWithFilter">organisationWithFilter</Link>
+                <Link to="/store/organisationWithFilter">organisationWithFilter hejehj</Link>
               </li>
             </ul>
           </div>

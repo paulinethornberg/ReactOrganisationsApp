@@ -64,6 +64,8 @@ class Organisation extends Component {
       let location = renderTags(organisation.location);
       let category = renderTags(organisation.category);
     let title = organisation.name.value;
+    var email = organisation.email.value;
+    var website = organisation.website.value;
     let imageLink = PeopleImage;
       if (organisation.image.value.length > 0) {
            imageLink = organisation.image.value[0].url;
@@ -84,9 +86,15 @@ class Organisation extends Component {
               <img alt={title} className="img-responsive" src={imageLink} title={title} />
             </div>
           </div>
+           <div className="article-detail-datetime">
+            {website}
+          </div>
+           <div className="article-detail-datetime">
+            {email} 
+          </div>
           <div className="row">
             <RichTextElement className="article-detail-content" element={description} />
-            <td dangerouslySetInnerHTML={{__html: description}} />
+            <p dangerouslySetInnerHTML={{__html: description}} />
           </div>
             <div className="row">
                 <span className="product-tile-price">

@@ -67,7 +67,6 @@ class Organisations extends Component {
       );
     };
 
-
     let filter = (organisation) => {
       return this.state.filter.matches(organisation);
     };
