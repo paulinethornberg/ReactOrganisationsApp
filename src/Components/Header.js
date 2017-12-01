@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router'
 import BackgroundImage from '../Images/header.png';
+import Location from './Location';
 
 const Header = () => {
   return (
+    <div>
     <header className="header" role="banner">
-     <section className="banner-section" style={{ backgroundImage: "url(" + BackgroundImage + ")" }}>
-    </section>
       <div className="menu">
         <div className="container">
           <nav role="navigation">
@@ -15,16 +15,16 @@ const Header = () => {
                 <IndexLink to="/">Home</IndexLink>
               </li>
               <li>
-                <Link to="/store">All organisations</Link>
-              </li>
-              <li>
-                <Link to="/about">About us</Link>
+                <Link to="/organisations">organisations</Link>
               </li>
             </ul>
           </nav>
+          
         </div>
       </div>
     </header>
+    <Location/>
+    </div>
   );
 }
 

@@ -1359,6 +1359,15 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
         display: block;
     }
 }
+/*# LocationFilter #*/
+.location-filter {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 300px;
+}
+.dropdown-placeholder {
+    font-size: 14px;
+}
 /*# Image #*/
 .product-tile-image {
     overflow: hidden;
@@ -5863,7 +5872,7 @@ footer {
 }
 @media (min-width: 768px) {
     /* md size */
-    
+
     .cafe-image-tile {
         height: 220px;
     }
@@ -5877,7 +5886,7 @@ footer {
 }
 @media (min-width: 1112px) {
     /* lg size */
-    
+
     .cafe-image-tile {
         height: 200px;
     }
@@ -5997,7 +6006,7 @@ footer {
 }
 @media (min-width: 768px) {
     /* md size */
-    
+
     .search-tile-content {
         padding-left: 1rem;
     }

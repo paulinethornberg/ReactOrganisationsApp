@@ -3,7 +3,7 @@ import {  ContentItem } from 'kentico-cloud-delivery-typescript-sdk';
 export class Organisation extends ContentItem {
     constructor(){
         super({
-            propertyResolver: ((fieldName) => {                
+            propertyResolver: ((fieldName) => {
                 if (fieldName === 'name'){
                     return 'name';
                 }
@@ -29,7 +29,7 @@ export class Organisation extends ContentItem {
                     return 'slug';
                 }
             })
-        })    
+        })
     }
-    
+
 }

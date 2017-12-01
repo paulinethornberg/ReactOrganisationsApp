@@ -6,26 +6,20 @@ import './index.css';
 import App from './App';
 import HomePage from './Pages/Home';
 import AboutPage from './Pages/About';
-import StorePage from './Pages/Store';
-import OrganisationListing from './Components/OrganisationListing';
-import OrganisationsPage from './Pages/Organisations';
 import OrganisationPage from './Pages/Organisation';
+import Category from './Components/Category';
+import FilteredOrganisations from './Pages/FilteredOrganisations'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
  <Router history={hashHistory} render={applyRouterMiddleware(useScroll())}>
-    <Route path="/" component={App}>
+    <Route name="app" path="/" component={App}>
       <IndexRoute component={HomePage}>
-       <IndexRedirect to="organisationWithFilter" />
-        <Route path="organisationWithFilter" component={OrganisationListing} />
+        <IndexRedirect to="categories" />
+        <Route name="categories" path="categories" component={Category} />
         </IndexRoute>
-      <Route path="organisations/:organisationSlug" component={OrganisationPage} />
-      <Route path="about" component={AboutPage} />
-      <Route path="organisations" component={OrganisationsPage} />
-      <Route path="store" component={StorePage}>
-        <IndexRedirect to="organisationWithFilter" />
-        <Route path="organisationWithFilter" component={OrganisationListing} />
-      </Route>
+      <Route name="organsiations" path="organisations" component={FilteredOrganisations} />
+      <Route name= "organisation" path="organisations/:organisationSlug" component={OrganisationPage} />
     </Route>
   </Router>
 ), document.getElementById('root'));

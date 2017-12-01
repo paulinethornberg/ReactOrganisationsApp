@@ -1,15 +1,12 @@
 import React from 'react';
-import Banner from '../Components/Banner.js';
-import OrganisationListing from '../Components/OrganisationListing.js';
-import LinkButton from '../Components/LinkButton.js';
-import OurStory from '../Components/OurStory.js';
+import CategoryComponent from '../Components/Category';
+import LocationComponent from '../Components/Location';
 
 const Home = () => {
   return (
     <div className="container">
-      <OrganisationListing />
-      <Banner />
-      <LinkButton link="/store/organisationWithFilter" text="More organisations" />
+        <h2>Välj en kategori för att se tips på organisationer</h2>
+        <CategoryComponent/>
     </div>
   );
 }
