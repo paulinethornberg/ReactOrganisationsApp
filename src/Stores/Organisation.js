@@ -173,6 +173,11 @@ class OrganisationStore {
     notifyChange;
   }
 
+  resetMainCategoryFilter(){
+    organisationFilter.categories = [];
+    console.log("THISONENOW" + organisationFilter.categories);
+  }
+
 //No filter functions, just to show chosen filter 
   setChosenLocation(location) {
     this.chosenLocation = location;

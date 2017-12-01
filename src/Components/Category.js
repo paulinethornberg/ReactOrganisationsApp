@@ -37,7 +37,6 @@ componentDidMount() {
 
      return (
       <div>
-        <h4>Categories</h4>
         <CategoryFilter categories={categories} filter={filter} />
       </div>
     );
@@ -64,6 +63,7 @@ const CategoryFilterItem = (props) => {
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let onChange = () => {
+    OrganisationStore.resetMainCategoryFilter();
     props.filter.toggleCategory(codename);
     OrganisationStore.setFilter(props.filter);
     OrganisationStore.setChosenFilter(codename);
@@ -72,7 +72,7 @@ const CategoryFilterItem = (props) => {
     <span className="checkbox js-postback">
      <Link to="organisations" onClick={onChange}>
     <div className="col-lg-4 col-sm-6">
-     {props.category.name}
+     <h3>{props.category.name}</h3>
       <img src={PeopleImage}/>
     </div>
     </Link>
