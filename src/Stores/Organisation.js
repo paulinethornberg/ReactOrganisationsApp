@@ -82,8 +82,8 @@ export class Filter {
   //TODO: this is not right i believe if we do this, all filters will dissappear.
   toggleSubCategory(category) {
     let index = this.categories.indexOf(category);
-    this.categories = [category];
-    // if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
+    // this.categories = [category];
+    if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
   }
 }
 
@@ -159,29 +159,41 @@ class OrganisationStore {
     return organisationFilter;
   }
 
-   setFilter(filter) {
+  setFilter(filter) {
+    console.log("hello cat before " +organisationFilter);
     organisationFilter = filter;
+    console.log("hello cat after " + organisationFilter);
     notifyChange();
   }
+  
+  setSubCategoryFilter(filter) {
+    console.log("hello subcat before " + organisationFilter);
+    organisationFilter = [filter];
+    console.log("hello subcat after " +organisationFilter);
+    notifyChange;
+  }
 
+//No filter functions, just to show chosen filter 
   setChosenLocation(location) {
     this.chosenLocation = location;
     console.log("chosenLocationNow: " + this.chosenLocation);    
   }
+
+//No filter functions, just to show chosen filter 
   getChosenLocation(){
     return this.chosenLocation;
   }
 
-   setChosenFilter(category) {
+//No filter functions, just to show chosen filter 
+  setChosenFilter(category) {
     this.chosenFitler = category;
   }
+
+//No filter functions, just to show chosen filter 
   getChosenFilter(){
     return this.chosenFitler;
   }
-  setSubCategoryFilter(filter) {
-    organisationFilter = [filter];
-    notifyChange;
-  }
+
   // Listeners
 
   addChangeListener(listener) {

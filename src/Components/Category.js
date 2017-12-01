@@ -70,11 +70,13 @@ const CategoryFilterItem = (props) => {
   }
    return (
     <span className="checkbox js-postback">
+     <Link to="organisations" onClick={onChange}>
     <div className="col-lg-4 col-sm-6">
-    <input id={codename} type="checkbox" checked={checked} onChange={onChange}/>
-      <label htmlFor={codename}>{props.category.name}</label>
+     {props.category.name}
       <img src={PeopleImage}/>
     </div>
+    </Link>
+   
     </span>
 
   );

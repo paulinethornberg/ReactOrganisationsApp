@@ -33,6 +33,7 @@ class Organisation extends Component {
         OrganisationStore.removeChangeListener(this.onChange);
     }
 
+   // TODO:  undersök vad som händer med renderingen 
     // shouldComponentUpdate(){
     //     return false;
     // }
