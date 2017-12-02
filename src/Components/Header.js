@@ -19,7 +19,6 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          
         </div>
       </div>
     </header>

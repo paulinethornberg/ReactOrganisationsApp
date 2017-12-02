@@ -37,16 +37,19 @@ class Organisations extends Component {
             if (tag.value.length === 0) {
                 return <span />
             }
-            //do not join with (",") but produce one little thing per tag
-            let text = tag.value.map((x) => x.name).join(", ");
+            let tagValues = tag.value.map(x => x.name);
 
-            return (
-                <span className="product-tile-status">
-                    {text}
+            let tags = tagValues.map((tag) => {
+                return (<TagItem tag={tag} />);
+            });  
+               
+             return (
+                <span >
+                    {tags}
                 </span>
             );
-        };
 
+        }
 
         let filter = (organisation) => {
             return this.state.filter.matches(organisation);
@@ -58,6 +61,7 @@ class Organisations extends Component {
             if (organisation.image.value.length > 0) {
                 imageLink = organisation.image.value[0].url;
             }
+           
             let location = renderTags(organisation.location);
             let category = renderTags(organisation.category);
             let link = "organisations/" + organisation.slug.value;
@@ -90,6 +94,18 @@ class Organisations extends Component {
             </div>
         );
     }
+}
+
+const TagItem = (props) => {
+    console.log(props);
+    var style = {
+        marginRight: '5px'
+    }
+    return (
+       <span style={style} className="product-tile-status">
+            {props.tag}
+        </span>
+    );
 }
 
 export default Organisations;
