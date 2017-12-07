@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router'
 import BackgroundImage from '../Images/header.png';
+import Logo from '../Images/Asylkompassen_RGB.png';
 import Location from './Location';
 
 const Header = () => {
+  var style = {
+    maxWidth: '20%'
+  }
   return (
     <div>
+   
     <header className="header" role="banner">
+     <img style={style} src={Logo}/>
       <div className="menu">
         <div className="container">
           <nav role="navigation">
