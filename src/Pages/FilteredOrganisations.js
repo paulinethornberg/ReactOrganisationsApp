@@ -4,7 +4,7 @@ import SubCategories from "../Components/SubCategories";
 
 const FilteredOrganisations = () => {
   return (
-    <div className="product-page row">
+    <div className="organisations-page row">
       <SubCategories />
       <div className="flex">
         <Organisations />

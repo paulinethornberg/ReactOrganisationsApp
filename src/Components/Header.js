@@ -19,10 +19,11 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+          <Location/>
         </div>
       </div>
     </header>
-    <Location/>
+
     </div>
   );
 }

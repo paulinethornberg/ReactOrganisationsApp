@@ -249,12 +249,12 @@ textarea {
     line-height: inherit;
 }
 a {
-    color: #08768C;
-    text-decoration: underline;
+    color: black;
+    text-decoration: none;
 }
 a:hover,
 a:focus {
-    color: #08768C;
+    color: #39BB9D;
     text-decoration: none;
 }
 h1 a,
@@ -1151,9 +1151,10 @@ p {
 /*# Menu #*/
 .menu {
     display: block;
-    background: #f9b234;
+    background: #39BB9D;
     text-transform: uppercase;
-    line-height: 3rem;
+    line-height: 5rem;
+    font-size: 18px;
 }
 .menu nav {
     display: inline-block;
@@ -1161,12 +1162,12 @@ p {
 }
 .menu li:first-child > a:focus,
 .menu li:first-child > a:hover {
-    background-color: #e50e7e;
+    background-color: #005B89;
 }
 .menu .CMSListMenuHighlightedLI > a,
 .menu a:focus,
 .menu a:hover {
-    background-color: #e50e7e;
+    background-color: #005B89;
 }
 .menu a,
 .menu a:hover,
@@ -1361,9 +1362,8 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
 }
 /*# LocationFilter #*/
 .location-filter {
-    font-size: 20px;
+    font-size: 18px;
     text-align: right;
-    padding-right: 300px;
 }
 .dropdown-placeholder {
     font-size: 14px;
@@ -1414,13 +1414,18 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
     font-size: 1rem;
 }
 /*# Product list page #*/
-.product-page {
+.organisations-page {
     margin-top: 1.25rem;
+    text-align: center;
 }
 .product-tile {
     overflow: hidden;
     border: 1px solid #E5E5E5;
     margin: 0 0 -2px -2px;
+    opacity: 0.3;
+}
+.product-tile:hover {
+    opacity: 1;
 }
 .product-tile .product-heading {
     text-align: center;
@@ -1786,7 +1791,7 @@ dd.product-price--retail {
     padding: 0;
 }
 @media (min-width: 768px) {
-    .product-page > div.flex {
+    .organisations-page > div.flex {
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;

@@ -40,9 +40,9 @@ class Organisations extends Component {
             let tagValues = tag.value.map(x => x.name);
 
             let tags = tagValues.map((tag) => {
-                return (<TagItem tag={tag} />);
-            });  
-               
+                return (<TagItem key={tag} tag={tag} />);
+            });
+
              return (
                 <span >
                     {tags}
@@ -61,7 +61,7 @@ class Organisations extends Component {
             if (organisation.image.value.length > 0) {
                 imageLink = organisation.image.value[0].url;
             }
-           
+
             let location = renderTags(organisation.location);
             let category = renderTags(organisation.category);
             let link = "organisations/" + organisation.slug.value;
@@ -69,7 +69,7 @@ class Organisations extends Component {
             return (
                 <div className="col-sm-6 col-lg-3" key={index}>
                     <article className="product-tile">
-                        <Link to={link}>
+                        <Link to={link} params={{organisationSlug: {name}}}>
                             <h1 className="product-heading">{name}</h1>
                             <figure className="product-tile-image">
                                 <img alt={name} className="" src={imageLink} title={name} />
@@ -88,8 +88,11 @@ class Organisations extends Component {
             );
         });
 
+        let mainDiv = {
+            textAlign: 'center'
+        };
         return (
-            <div id="product-list" className="col-md-8 col-lg-9 product-list">
+            <div style={mainDiv} id="product-list" className="col-md-8 col-lg-9 product-list">
                 {organisations}
             </div>
         );
@@ -97,7 +100,6 @@ class Organisations extends Component {
 }
 
 const TagItem = (props) => {
-    console.log(props);
     var style = {
         marginRight: '5px'
     }
