@@ -1,11 +1,12 @@
 import Client from "../Client.js";
+import axios from 'axios';
 
 let changeListeners = [];
 let initialized = false;
 let organisations = [];
 let organisationDetails = {};
 let organisationListCapacity = 0;
-let locations = [];
+let locations = ['hela_sverige'];
 let categories = [];
 let chosenFilter = new String();
 let chosenLocation = new String();
@@ -66,7 +67,7 @@ export class Filter {
 
     return this.categories.some(x => categories.includes(x));
   }
- 
+
   toggleLocation(location) {
     let index = this.locations.indexOf(location);
 
@@ -78,13 +79,15 @@ export class Filter {
 
     if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
   }
-  
+
   //TODO: this is not right i believe if we do this, all filters will dissappear.
   toggleSubCategory(category) {
     let index = this.categories.indexOf(category);
     // this.categories = [category];
     if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
   }
+
+
 }
 
 let organisationFilter = new Filter();
@@ -93,14 +96,14 @@ class OrganisationStore {
 
   // Actions
 
-   provideOrganisation(organisationSlug) {
-
-    Client.items()
+  async provideOrganisation(organisationSlug) {
+    await Client.items()
       .type('organisation')
       .equalsFilter('elements.slug', organisationSlug)
-      .elementsParameter(['name', 'description', 'image', 'phone', 'website'])
+      .elementsParameter(['name', 'description', 'image', 'phone', 'website', 'email', 'location', 'category'])
       .get()
       .subscribe(response => {
+        // response = response.json();
         if (!response.isEmpty) {
           organisationDetails[organisationSlug] = response.items[0];
           notifyChange();
@@ -136,11 +139,11 @@ class OrganisationStore {
   // Methods
 
   getOrganisation(organisationSlug) {
-    if(this.organisations === undefined) {
-      this.provideOrganisations();
-    }
-    return organisations.find((organisation) => organisation.slug.value === organisationSlug);
-    // organisationDetails[organisationSlug];
+    // if(this.organisations === undefined) {
+    //   this.provideOrganisations();
+    // }
+    // return organisations.find((organisation) => organisation.slug.value === organisationSlug);
+    return organisationDetails[organisationSlug];
   }
 
   getOrganisations(count) {
@@ -160,41 +163,36 @@ class OrganisationStore {
   }
 
   setFilter(filter) {
-    console.log("hello cat before " +organisationFilter);
     organisationFilter = filter;
-    console.log("hello cat after " + organisationFilter);
     notifyChange();
   }
-  
+
   setSubCategoryFilter(filter) {
-    console.log("hello subcat before " + organisationFilter);
     organisationFilter = [filter];
-    console.log("hello subcat after " +organisationFilter);
     notifyChange;
   }
 
   resetMainCategoryFilter(){
     organisationFilter.categories = [];
-    console.log("THISONENOW" + organisationFilter.categories);
   }
 
-//No filter functions, just to show chosen filter 
+//No filter functions, just to show chosen filter
   setChosenLocation(location) {
     this.chosenLocation = location;
-    console.log("chosenLocationNow: " + this.chosenLocation);    
+    ("chosenLocationNow: " + this.chosenLocation);
   }
 
-//No filter functions, just to show chosen filter 
+//No filter functions, just to show chosen filter
   getChosenLocation(){
     return this.chosenLocation;
   }
 
-//No filter functions, just to show chosen filter 
+//No filter functions, just to show chosen filter
   setChosenFilter(category) {
     this.chosenFitler = category;
   }
 
-//No filter functions, just to show chosen filter 
+//No filter functions, just to show chosen filter
   getChosenFilter(){
     return this.chosenFitler;
   }
@@ -209,6 +207,32 @@ class OrganisationStore {
     changeListeners = changeListeners.filter((element) => {
       return element !== listener;
     });
+  }
+   getIconForCategory(category) {
+    if(category == "Juridisk rådgivning"){
+      return 'gavel';
+    }
+    if(category == "Mat & Boende"){
+      return 'home';
+    }
+    if(category == "Hälsa"){
+      return 'medkit';
+    }
+    if(category == "Kvinna"){
+      return 'venus';
+    }
+    if(category == "Socialt (stöd/umgänge)"){
+      return 'users';
+    }
+    if(category == "Arbete & utbildning"){
+      return 'briefcase';
+    }
+    if(category == "Barn"){
+      return 'child';
+    }
+    if(category == "HBTQI+"){
+      return 'transgender-alt';
+    }
   }
 
 }

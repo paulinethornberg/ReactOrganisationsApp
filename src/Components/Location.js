@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router'
 import OrganisationStore from '../Stores/Organisation';
 import Dropdown from 'react-dropdown';
+import FontAwesome from 'react-fontawesome';
 import BubblesImage from '../Images/bubbles.jpg';
 
 let getState = () => {
@@ -36,9 +37,8 @@ componentDidMount() {
   }
 
    onLocationChange (event) {
-   console.log(event);
    this.state.filter.toggleLocation(event.value);
-   OrganisationStore.setChosenLocation(event.label);   
+   OrganisationStore.setChosenLocation(event.label);
    OrganisationStore.setFilter(this.state.filter);
   }
 
@@ -48,121 +48,28 @@ componentDidMount() {
       let options = this.state.locations.map((location) => {
       return {label: location.name, value: location.codename}
     });
-    let chosenLocation = OrganisationStore.getChosenLocation(); 
+    let chosenLocation = OrganisationStore.getChosenLocation();
+    let locationDiv = {
+      color: 'white',
+      display: 'inline-block',
+      float: 'right',
+    }
 
     let dropdownStyle = {
-      backgroundColor: 'red',
+      color: 'white',
       fontSize: '14px'
     }
 
     return (
       <div>
-        <Dropdown style={dropdownStyle} className="location-filter" options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Klicka för att välja en plats" />
+      <div style={locationDiv}>
+        <FontAwesome name="map-marker" size="2x" />
+        </div>
+        <div style={locationDiv}>
+        <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
+      </div>
       </div>
     );
   }
 }
 export default Location;
-  // let options = this.state.locations.map((location) => {
-  //     return {key: location.name, value: location.codename}
-  //   });
-
-// const LocationFilter = (props) => {
-//   let options = props.locations.map((location) => location.name);
-//   console.log("hello"+ options);
-//   const defaultOption = options[0]
-//    let onChange = (codename) => {
-//     props.filter.toggleLocation(codename);
-//     OrganisationStore.setFilter(props.filter);
-//     OrganisationStore.setChosenFilter(codename);
-//   }
-//   return (
-//     <div>
-//     <select>
-//     </select>
-//     <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Välj en plats" />
-//     </div>
-//   );
-// }
-
-//      return (
-//       <div>
-//         <h4>Locations</h4>
-//         <LocationFilter locations={locations} filter={filter} />
-//       </div>
-//     );
-//   }
-// }
-
-// const LocationFilter = (props) => {
-//   let filterItems = props.locations.map((location) => {
-//   return (
-//         <LocationFilterItem location={location} filter={props.filter} key={location.codename}/>
-//   );
-// // });
-//   return (
-//      <select onChange={onLocationChange}>
-//         <option value="1">1 </option>
-//         <option value="2"> 2</option>
-//      </select>
-//   );
-// }
-
-//   return (
-//      <select onChange={onChange}>
-//    
-//       {filterItems}
-//      </select>
-//   );
-// }
-
-// const LocationFilter = (props) => {
-//   let filterItems = props.locations.map((location) => {
-//     return (
-//       <LocationFilterItem location={location} filter={props.filter} key={location.codename}/>
-//     );
-//   });
-
-// const LocationFilterItem = (props) => {
-//   let locations = props.location.terms;
-//   let name = props.location.name;
-//   let codename = props.location.codename;
-//    return (
-//     <option value="{codename}">{name}</option>
-//   );
-// }
-
-
-
-
-// const LocationFilter = (props) => {
-//   let options = props.locations.map((location) => location.name);
-//   console.log("hello"+ options);
-//   const defaultOption = options[0]
-//    let onChange = (codename) => {
-//     props.filter.toggleLocation(codename);
-//     OrganisationStore.setFilter(props.filter);
-//     OrganisationStore.setChosenFilter(codename);
-//   }
-//   return (
-//     <div>
-//     <select>
-//     </select>
-//     <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Välj en plats" />
-//     </div>
-//   );
-// }
-
-// const LocationFilter = (props) => {
-//   let filterItems = props.locations.map((location) => {
-//     return (
-//       <LocationFilterItem location={location} filter={props.filter} key={location.codename}/>
-//     );
-//   });
-
-//   return (
-//     <div>
-//       {filterItems}
-//     </div>
-//   );
-// }

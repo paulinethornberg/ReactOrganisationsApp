@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router'
 import OrganisationStore from '../Stores/Organisation';
 import PeopleImage from '../Images/people.jpg';
+import FontAwesome from 'react-fontawesome';
 
 let getState = () => {
   return {
@@ -34,9 +35,11 @@ componentDidMount() {
   render() {
     let categories = this.state.categories
        let filter = this.state.filter;
-
+       let center = {
+         textAlign: 'center'
+       }
      return (
-      <div>
+      <div style={center}>
         <CategoryFilter categories={categories} filter={filter} />
       </div>
     );
@@ -62,22 +65,29 @@ const CategoryFilterItem = (props) => {
   let categories = props.category.terms;
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
+  var icon = OrganisationStore.getIconForCategory(props.category.name);
   let onChange = () => {
     OrganisationStore.resetMainCategoryFilter();
     props.filter.toggleCategory(codename);
     OrganisationStore.setFilter(props.filter);
     OrganisationStore.setChosenFilter(codename);
   }
+
+  let divStyle = {
+    paddingTop: '50px',
+    paddingBottom: '50px'
+  }
+
    return (
-    <span className="checkbox js-postback">
+    <div >
      <Link to="organisations" onClick={onChange}>
-    <div className="col-lg-4 col-sm-6">
+      <div style={divStyle} className="col-lg-4 col-sm-6">
      <h3>{props.category.name}</h3>
-      <img src={PeopleImage}/>
+     <FontAwesome name={icon} size="4x" />
     </div>
     </Link>
-   
-    </span>
+
+    </div>
 
   );
 }
