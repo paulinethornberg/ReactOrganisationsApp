@@ -1,5 +1,4 @@
 import Client from "../Client.js";
-import axios from 'axios';
 
 let changeListeners = [];
 let initialized = false;

@@ -8,13 +8,15 @@ const Header = () => {
   var style = {
     maxWidth: '20%'
   }
+        // <img style={style} src={Logo}/> 
   return (
     <div>
    
     <header className="header" role="banner">
-     <img style={style} src={Logo}/>
+
       <div className="menu">
         <div className="container">
+         
           <nav role="navigation">
             <ul>
               <li>
