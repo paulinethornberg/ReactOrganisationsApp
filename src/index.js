@@ -14,7 +14,7 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render((
  <Router history={hashHistory} render={applyRouterMiddleware(useScroll())}>
     <Route name="app" path="/" component={App}>
-      <IndexRoute component={HomePage}>
+      <IndexRoute name="home" component={HomePage}>
         <IndexRedirect to="categories" />
         <Route name="categories" path="categories" component={Category} />
         </IndexRoute>

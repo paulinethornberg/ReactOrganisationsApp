@@ -30,6 +30,7 @@ let fetchCategories = () => {
     .get()
     .subscribe(response => {
       categories = response.terms;
+      console.log(categories);
       // if (categories.terms.length > 0) {
       //   subcategories = categories.terms;
       // }
