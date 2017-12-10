@@ -57,7 +57,7 @@ class Organisation extends Component {
         let organisation = this.state.organisation;
         if (!organisation) {
             return (
-                <div className="container">Could not find organisation</div>
+                <div className="container"></div>
             );
         }
 
@@ -78,19 +78,6 @@ class Organisation extends Component {
             );
 
         }
-        // let renderTags = (tag) => {
-        //     if (tag.value.length === 0) {
-        //         return <span />
-        //     }
-
-        //     let text = tag.value.map((x) => x.name).join(", ");
-
-        //     return (
-        //         <span className="product-tile-status">
-        //             {text}
-        //         </span>
-        //     );
-        // };
 
         let formatDate = (value) => {
             return dateFormat(value, "dddd, mmmm d, yyyy");
@@ -117,7 +104,7 @@ class Organisation extends Component {
             margin: '0 auto'
         }
         var basicInfo = {
-            margin: '30px',
+            // margin: '30px',
 
         }
         var tagContainer = {
@@ -131,7 +118,6 @@ class Organisation extends Component {
 
         return (
             <div style={central} className="container">
-                <FontAwesome name="rocket" size="2x" spin />
                 <article className="article-detail col-lg-9 col-md-12 article-detail-related-box">
                     <h2>{title}</h2>
                     <div className="article-detail-datetime">
@@ -140,9 +126,9 @@ class Organisation extends Component {
                     <div className="row">
                         <div className="col-lg-8" dangerouslySetInnerHTML={{ __html: description }} >
                         </div>
-                        <div className="article-detail-image col-lg-4">
-                            <img alt={title} className="img-responsive" src={imageLink} title={title} />
-                        </div>
+                        <figure className="product-tile-image">
+                                <img alt={title} className="" src={imageLink} title={title} />
+                            </figure>
                     </div>
                     <div>
                         <div style={basicInfo}>

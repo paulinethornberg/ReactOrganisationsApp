@@ -67,7 +67,7 @@ class Organisations extends Component {
             let link = "organisations/" + organisation.slug.value;
 
             return (
-                <div className="col-sm-6 col-lg-3" key={index}>
+                <div className="col-sm-6 col-xs-6 col-lg-4" key={index}>
                     <article className="product-tile">
                         <Link to={link} params={{organisationSlug: {name}}}>
                             <h1 className="product-heading">{name}</h1>
@@ -101,10 +101,13 @@ class Organisations extends Component {
 
 const TagItem = (props) => {
     var style = {
-        marginRight: '5px'
+        marginRight: '5px',
+        display: 'inline-block',
+        marginTop: '5px',
+        marginBottom: '5px',
     }
     return (
-       <span style={style} className="product-tile-status">
+       <span style={style} className=" product-tile-status">
             {props.tag}
         </span>
     );

@@ -5,9 +5,7 @@ import Logo from '../Images/Asylkompassen_Reversed.png';
 import Location from './Location';
 
 const Header = () => {
-  var style = {
-    maxWidth: '20%'
-  }
+
         // 
   return (
     <div>
@@ -17,7 +15,7 @@ const Header = () => {
       <div className="menu">
         <div className="container">
          <IndexLink className="logo-link" to="/">
-         <img style={style} src={Logo}/> 
+         <img className="logo-link" src={Logo}/> 
          </IndexLink>
           <nav role="navigation">
           </nav>

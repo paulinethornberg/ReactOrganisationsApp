@@ -1120,9 +1120,14 @@ p {
 }
 .logo-link{
     display: inline-block;
-
+    max-width: 40%;
 }
-
+@media (max-width: 499px) {
+ .logo-link{
+    max-width: 60%;
+}
+}
+    
 .menu nav {
     display: inline-block;
     float: left;
@@ -1343,7 +1348,7 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
     display: block;
     margin: .5rem;
     padding-top: 15%;
-    padding-bottom: 25%;
+    /*padding-bottom: 25%;*/
 }
 .product-tile-image img {
     height: auto;
@@ -1357,7 +1362,7 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
 .product-tile-info {
     font-size:12px;
     padding: 1.25rem;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
 }
 .product-tile .product-tile-status {
