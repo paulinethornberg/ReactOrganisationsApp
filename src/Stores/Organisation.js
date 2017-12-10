@@ -9,6 +9,8 @@ let locations = ['hela_sverige'];
 let categories = [];
 let chosenFilter = new String();
 let chosenLocation = new String();
+let chosenCategory = new String(); 
+let subCategories = [];
 
 let notifyChange = () => {
   changeListeners.forEach((listener) => {
@@ -30,10 +32,6 @@ let fetchCategories = () => {
     .get()
     .subscribe(response => {
       categories = response.terms;
-      console.log(categories);
-      // if (categories.terms.length > 0) {
-      //   subcategories = categories.terms;
-      // }
       notifyChange();
     });
 }
@@ -42,6 +40,7 @@ export class Filter {
   constructor() {
     this.locations = [];
     this.categories = [];
+    this.chosenCategory = new String();
 
   }
  matches(organisation) {
@@ -76,17 +75,29 @@ export class Filter {
 
   toggleCategory(category) {
     let index = this.categories.indexOf(category);
-
-    if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
+    
+    if (index < 0) {
+      this.categories.push(category);
+      this.chosenCategory = category;
+    } else this.categories.splice(index, 1);
   }
 
-  //TODO: this is not right i believe if we do this, all filters will dissappear.
-  toggleSubCategory(category) {
-    let index = this.categories.indexOf(category);
-    // this.categories = [category];
-    if (index < 0) this.categories.push(category); else this.categories.splice(index, 1);
-  }
 
+     toggleSubCategory(category) {
+        if (this.categories.length === 1 && this.categories[0] === this.chosenCategory) {
+          this.categories = [];
+        };
+        let index = this.categories.indexOf(category);
+        if (index < 0) {
+            this.categories.push(category);
+        } else {
+            this.categories.splice(index, 1);
+        };
+
+        if (this.categories.length === 0) {
+          this.categories.push(this.chosenCategory);
+        }
+    }
 
 }
 

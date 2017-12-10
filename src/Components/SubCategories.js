@@ -39,7 +39,6 @@ class SubCategories extends Component {
 
     return (
       <div style={subFilterStyle}>
-        <h4>Kategorier</h4>
         <CategoryFilter categories={categories} filter={filter} />
       </div>
     );
@@ -71,13 +70,13 @@ const CategoryFilterItem = (props) => {
     OrganisationStore.setFilter(props.filter);
     chosenFilter = codename;
   }
-
+        // <input id={codename} type="checkbox" checked={checked} onChange={onChange} />
+        // <label htmlFor={codename}>{props.category.name}</label>
   if (codename === chosenFilter) {
     return (
       <div >
         <h3>{props.category.name}</h3>
-        <input id={codename} type="checkbox" checked={checked} onChange={onChange} />
-        <label htmlFor={codename}>{props.category.name}</label>
+
 
         <SubCategoryFilter categories={categories} filter={props.filter} />
       </div>
@@ -106,12 +105,13 @@ const SubCategoryFilter = (props) => {
 }
 
 const SubCategoryFilterItem = (props) => {
-  let categories = props.category.terms;
+  let categories = props.category.name;
+  // console.log("this is props " + props.category.name);
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let onChange = () => {
     //remove filter on change. add maincategory back on remove
-    props.filter.toggleCategory(codename);
+    props.filter.toggleSubCategory(codename);
     OrganisationStore.setFilter(props.filter);
   }
 
