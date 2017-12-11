@@ -38,13 +38,14 @@ class Organisations extends Component {
                 return <span />
             }
             let tagValues = tag.value.map(x => x.name);
-
+            // var icon = OrganisationStore.getIconForCategory(props.category.name);
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag} tag={tag} />);
             });
 
              return (
                 <span >
+                
                     {tags}
                 </span>
             );
@@ -62,22 +63,21 @@ class Organisations extends Component {
                 imageLink = organisation.image.value[0].url;
             }
 
-            let location = renderTags(organisation.location);
+
+            // let location = renderTags(organisation.location);
             let category = renderTags(organisation.category);
             let link = "organisations/" + organisation.slug.value;
 
             return (
-                <div className="col-sm-6 col-xs-6 col-lg-4" key={index}>
+                <div className="col-sm-6 col-xs-6 col-lg-3" key={index}>
                     <article className="product-tile">
                         <Link to={link} params={{organisationSlug: {name}}}>
-                            <h1 className="product-heading">{name}</h1>
                             <figure className="product-tile-image">
                                 <img alt={name} className="" src={imageLink} title={name} />
                             </figure>
+                            <h1 className="product-heading">{name}</h1>
+                            
                             <div className="product-tile-info">
-                                <span className="product-tile-price">
-                                    {location}
-                                </span>
                                 <span className="product-tile-price">
                                     {category}
                                 </span>

@@ -210,7 +210,7 @@ textarea {
     line-height: inherit;
 }
 a {
-    color: black;
+    color: #005B89;
     text-decoration: none;
 }
 a:hover,
@@ -1113,18 +1113,18 @@ p {
 .menu {
     display: block;
     padding-top: 20px;
-    background: #39BB9D;
+    background: #fff;
     text-transform: uppercase;
     line-height: 5rem;
     font-size: 18px;
 }
 .logo-link{
     display: inline-block;
-    max-width: 40%;
+    max-width: 500px;
 }
 @media (max-width: 499px) {
  .logo-link{
-    max-width: 60%;
+    max-width: 300px;
 }
 }
     
@@ -1138,13 +1138,14 @@ p {
 }*/
 .menu .CMSListMenuHighlightedLI > a,
 .menu a:focus,
-/*.menu a:hover {
-    background-color: #005B89;
-}*/
+.menu a:hover {
+    /*background-color: #39BB9D*/
+}
 .menu a,
 .menu a:hover,
 .menu a:focus {
     text-decoration: none;
+    /*background-color: #39BB9D;*/
     color: #FFF;
 }
 .menu ul {
@@ -1393,20 +1394,20 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
 .product-tile {
     overflow: hidden;
     border: 1px solid #E5E5E5;
-    margin: 0 0 -2px -2px;
+    margin: 0 0 40px 40px;
 }
 /*.product-tile:hover {
     opacity: 1;
 }*/
 
-@media (min-width: 1111px) {
+/*@media (min-width: 1111px) {
     .product-tile {
     opacity: 0.5;
 }
 .product-tile:hover {
     opacity: 1;
 }
-}
+}*/
 .product-tile .product-heading {
     text-align: center;
     font-size: 1rem;
@@ -1919,8 +1920,8 @@ footer {
     margin-top: 2rem;
 }
 .footer-col {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    /*padding-top: 1rem;
+    padding-bottom: 2rem;*/
     text-align: left;
     overflow: hidden;
 }
@@ -1935,9 +1936,9 @@ footer {
     color: white;
 }
 .footer-container {
-    background: #1D1D1D;
+    background: #005B89;
     color: #fff;
-    padding-bottom: 2rem;
+    /*padding-bottom: 2rem;*/
 }
 .footer-container a {
     color: #fff;

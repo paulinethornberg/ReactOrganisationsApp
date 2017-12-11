@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, IndexLink } from 'react-router'
 import BackgroundImage from '../Images/header.png';
 import Logo from '../Images/Asylkompassen_Reversed.png';
+import HorizontalLogo from '../Images/Asylkompassen_Horizontal.png';
 import Location from './Location';
 
 const Header = () => {
@@ -15,9 +16,14 @@ const Header = () => {
       <div className="menu">
         <div className="container">
          <IndexLink className="logo-link" to="/">
-         <img className="logo-link" src={Logo}/> 
+         <img className="logo-link" src={HorizontalLogo}/> 
          </IndexLink>
           <nav role="navigation">
+           <ul>
+               <li>
+                 <IndexLink to="/">Home</IndexLink>
+              </li>
+    </ul>
           </nav>
           <Location/>
         </div>

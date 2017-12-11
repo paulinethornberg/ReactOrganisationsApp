@@ -74,16 +74,16 @@ const CategoryFilterItem = (props) => {
   }
 
   let divStyle = {
-    paddingTop: '50px',
-    paddingBottom: '50px'
+    paddingTop: '150px',
+    paddingBottom: '150px'
   }
 
    return (
     <div >
      <Link to="organisations" onClick={onChange}>
-      <div style={divStyle} className="col-lg-4 col-sm-6 col-xs-6">
+      <div style={divStyle} className="col-lg-3 col-sm-6 col-xs-6">
      <h3>{props.category.name}</h3>
-     <FontAwesome name={icon} size="4x" />
+     <FontAwesome name={icon} size="5x" />
     </div>
     </Link>
 

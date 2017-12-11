@@ -50,7 +50,7 @@ componentDidMount() {
     });
     let chosenLocation = OrganisationStore.getChosenLocation();
     let locationDiv = {
-      color: 'white',
+      color: 'black',
       display: 'inline-block',
       float: 'right',
     }

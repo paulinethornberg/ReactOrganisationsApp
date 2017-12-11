@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import OrganisationStore from '../Stores/Organisation';
+import FontAwesome from 'react-fontawesome';
+
 
 let getState = () => {
   return {
@@ -30,12 +32,15 @@ class SubCategories extends Component {
   }
 
   render() {
-    let categories = this.state.categories
+    let categories = this.state.categories;
+    console.log(categories);
     let filter = this.state.filter;
     var subFilterStyle = {
       textAlign: 'center',
       fontSize: '16px'
     }
+
+
 
     return (
       <div style={subFilterStyle}>
@@ -45,8 +50,8 @@ class SubCategories extends Component {
   }
 }
 
-
 const CategoryFilter = (props) => {
+
   let filterItems = props.categories.map((category) => {
     return (
       <CategoryFilterItem category={category} filter={props.filter} key={category.codename} />
@@ -65,6 +70,7 @@ const CategoryFilterItem = (props) => {
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let chosenFilter = OrganisationStore.getChosenFilter();
+  var icon = OrganisationStore.getIconForCategory(props.category.name);
   let onChange = () => {
     props.filter.toggleCategory(codename);
     OrganisationStore.setFilter(props.filter);
@@ -75,9 +81,8 @@ const CategoryFilterItem = (props) => {
   if (codename === chosenFilter) {
     return (
       <div >
+      <FontAwesome name={icon} size="4x" />
         <h3>{props.category.name}</h3>
-
-
         <SubCategoryFilter categories={categories} filter={props.filter} />
       </div>
     );
