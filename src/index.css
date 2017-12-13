@@ -1344,14 +1344,15 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
 /*# Image #*/
 .product-tile-image {
     overflow: hidden;
+    width: 300px;
     text-align: center;
     position: relative;
     display: block;
     margin: .5rem;
-    padding-top: 15%;
+    /*padding-top: 15%;*/
     /*padding-bottom: 25%;*/
 }
-.product-tile-image img {
+/*.product-tile-image img {
     height: auto;
     width: 100%;
 }
@@ -1359,25 +1360,26 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
     opacity: .4;
     filter: alpha(opacity=40);
     /* msie */
-}
-.product-tile-info {
+
+/*.product-tile-info {
     font-size:12px;
     padding: 1.25rem;
-    /*position: absolute;*/
+    /*position: absolute;
     bottom: 0;
+
 }
-.product-tile .product-tile-status {
+.product-tile-status {
     background-color: #f9b234;
     margin-top: 25%;
     color: #FFF;
     padding: .3rem 0.6rem;
     margin-top: 20%;
     margin-bottom: 20%;
-    /*position: absolute;*/
+    /*position: absolute;
     z-index: 2;
 }
 /*# Price #*/
-.product-tile-price {
+/*.product-tile-price {
     font-size: 0.8rem;
     font-weight: bold;
     margin-right: 0.5rem;
@@ -1385,17 +1387,14 @@ ul.dropdown-items-list.dropdown-desktop-visible a {
 .product-tile-list-price {
     text-decoration: line-through;
     font-size: 1rem;
-}
+}*/
 /*# Product list page #*/
-.organisations-page {
-    margin-top: 1.25rem;
-    text-align: center;
-}
-.product-tile {
+
+/*.product-tile {
     overflow: hidden;
     border: 1px solid #E5E5E5;
     margin: 0 0 40px 40px;
-}
+}*/
 /*.product-tile:hover {
     opacity: 1;
 }*/
@@ -1689,12 +1688,12 @@ dd.product-price--retail {
     padding: 0;
 }
 @media (min-width: 768px) {
-    .organisations-page > div.flex {
+    /*.organisations-page > div.flex {
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-    }
+    }*/
 }
 .product-list .ContentLabel {
     display: block;
@@ -2091,7 +2090,7 @@ footer {
     }
 }
 /*# Article detail tile #*/
-.article-detail-datetime {
+/*.article-detail-datetime {
     margin-bottom: 1rem;
 }
 .article-detail-image {
@@ -2106,7 +2105,7 @@ footer {
     }
 }
 /*# Article related articles#*/
-.article-related-articles {
+/*.article-related-articles {
     margin-top: 5rem;
 }
 .article-related-articles .title-tab {
@@ -2122,7 +2121,8 @@ footer {
     .article-related-articles .col-lg-3 .article-tile-image {
         height: 245px;
     }
-}
+}*/
+
 /*# Contact info #*/
 .contact-info {
     list-style-type: none;

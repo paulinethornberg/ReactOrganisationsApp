@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, IndexLink } from 'react-router'
 import FontAwesome from 'react-fontawesome';
 import OrganisationStore from '../Stores/Organisation';
 import dateFormat from 'dateformat';
@@ -103,72 +104,78 @@ class Organisation extends Component {
             width: '70%',
             margin: '0 auto'
         }
-        var basicInfo = {
-            // margin: '30px',
 
-        }
         var tagContainer = {
             paddingTop: '40px'
         }
-        var basicInfoText = {
-            paddingLeft: '30px',
-            display: 'inline-block',
-            fontSize: '18px'
-        }
+
 
         return (
-            <div style={central} className="container">
-                <article className="article-detail col-lg-9 col-md-12 article-detail-related-box">
-                    <h2>{title}</h2>
-                    <div className="article-detail-datetime">
-                        {title}
+            <div className="organisation-page">
+                <Link to="organisations">
+                    <div className="back-arrow">
+                        <FontAwesome size='5x' name='long-arrow-left' />
                     </div>
-                    <div className="row">
-                        <div className="col-lg-8" dangerouslySetInnerHTML={{ __html: description }} >
-                        </div>
-                        <figure className="product-tile-image">
-                                <img alt={title} className="" src={imageLink} title={title} />
-                            </figure>
-                    </div>
-                    <div>
-                        <div style={basicInfo}>
-                         <FontAwesome size='2x' name='globe' />
-                            <div style={basicInfoText}>
-                            {website}
-                            </div>
-                        </div>
-                        <div style={basicInfo}>
-                            <FontAwesome size='2x' name='facebook' />
-                            <div style={basicInfoText}>
-                            facebook
-                            </div>
-                    </div>
-                        <div style={basicInfo}>
-                            <FontAwesome size='2x' name='phone' />
-                            <div style={basicInfoText}>
-                                {phone}
-                            </div>
-                        </div>
-                        <div style={basicInfo}>
-                            <FontAwesome size='2x' name='envelope-o' />
-                             <div style={basicInfoText}>
-                            {email}
-                            </div>
-                        </div>
-                        <div style={tagContainer}>
+                </Link>
+                <div style={central} className="container">
+                    <div >
+
+                        <img alt={title} className="organisation-image" src={imageLink} title={title} />
+                        <h2  className="organisation-title notranslate" >{title}</h2>
+
+                        <div className="notranslate">
                             <div>
-                                <span className="product-tile">
-                                    {location}
-                                </span>
+                              <div className="organisation-contact-info" >
+                                <FontAwesome size='3x' name='globe' />
+                                </div>
+                                <div className="organisation-contact-info-text"> 
+                                    {website}
+                                </div>
                             </div>
+                            <div >
+                             <div className="organisation-contact-info" >
+                                <FontAwesome size='3x' name='facebook' />
+                                </div>
+                                <div className="organisation-contact-info-text">
+                                    facebook
+                                </div>
+                            </div>
+                            <div >
+                              <div className="organisation-contact-info" >
+                                <FontAwesome size='3x' name='phone' />
+                                </div>
+                                <div className="organisation-contact-info-text">
+                                    {phone}
+                                </div>
+                            </div>
+                            <div>
+                            <div className="organisation-contact-info" >
+                                <FontAwesome size='3x' name='envelope-o' />
+                            </div>
+                                <div className="organisation-contact-info-text">
+                                    {email}
+                                </div>
+                            </div>
+                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: description }} >
+
+                        </div>
+                        <div>
                             <div style={tagContainer}>
-                                <span className="product-tile">
-                                    {category}
-                                </span>
+                                <div>
+                                    <span className="product-tile">
+                                        {location}
+                                    </span>
+                                </div>
+                                <div style={tagContainer}>
+                                    <span className="product-tile">
+                                        {category}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
             </div>
         );
     }
@@ -178,7 +185,7 @@ const TagItem = (props) => {
         marginRight: '5px'
     }
     return (
-        <span style={style} className="product-tile-status">
+        <span style={style} className="organisation-tags-status">
             {props.tag}
         </span>
     );

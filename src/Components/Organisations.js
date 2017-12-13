@@ -69,16 +69,16 @@ class Organisations extends Component {
             let link = "organisations/" + organisation.slug.value;
 
             return (
-                <div className="col-sm-6 col-xs-6 col-lg-3" key={index}>
-                    <article className="product-tile">
+                <div className="organisations-page col-sm-6 col-md-6 col-xs-6 col-lg-3" key={index}>
+                    <article >
                         <Link to={link} params={{organisationSlug: {name}}}>
-                            <figure className="product-tile-image">
+                            <figure className="organisations-image">
                                 <img alt={name} className="" src={imageLink} title={name} />
                             </figure>
-                            <h1 className="product-heading">{name}</h1>
+                            <h1 className="notranslate">{name}</h1>
                             
-                            <div className="product-tile-info">
-                                <span className="product-tile-price">
+                            <div className="organisation-tags">
+                                <span>
                                     {category}
                                 </span>
                             </div>
@@ -92,7 +92,7 @@ class Organisations extends Component {
             textAlign: 'center'
         };
         return (
-            <div style={mainDiv} id="product-list" className="col-md-8 col-lg-9 product-list">
+            <div style={mainDiv} id="product-list">
                 {organisations}
             </div>
         );
@@ -107,7 +107,7 @@ const TagItem = (props) => {
         marginBottom: '5px',
     }
     return (
-       <span style={style} className=" product-tile-status">
+       <span style={style} className=" organisation-tags-status">
             {props.tag}
         </span>
     );

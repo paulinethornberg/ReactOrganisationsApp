@@ -1,0 +1,102 @@
+/*COMMONS*/
+
+.back-arrow{
+    color: #005B89;
+    margin-top: 10px;
+    margin-left:70px;
+}
+/*ORGANISATION PAGE*/
+.organisation-page h1{
+    color: #39BB9D;
+    text-transform: uppercase;
+}
+.organisation-page h2{
+    color: #39BB9D;
+    text-transform: uppercase;
+}
+.organisation-page h3{
+    color: #39BB9D;
+    text-transform: uppercase;
+}
+.organisation-page {
+ color: #005B89;
+}
+
+.organisation-image {
+   
+    /*width: 300px;*/
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+.organisation-title{
+    text-align: center;
+}
+.organisation-contact-info{
+  color: #39BB9D;
+  display: inline-block;
+}
+.organisation-contact-info-text{
+    padding-left: 30px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 26px;
+     color: #005B89;
+     display: inline-block;
+}
+
+/*ORGANISATIONS PAGE*/
+.organisations-page {
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.organisations-page h1{
+   color: #005B89;
+   font-size:20px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+.organisations-page h1:hover{
+   color: #39BB9D;
+}
+
+.organisations-image {
+    overflow: hidden;
+    /*width: 300px;*/
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: .5rem;
+    /*padding-top: 15%;*/
+    /*padding-bottom: 25%;*/
+}
+.organisations-image img {
+    height: auto;
+    width: 300px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.organisation-tags {
+    font-size:12px;
+    padding: 1.25rem;
+    /*position: absolute;*/
+    bottom: 0;
+}
+.organisation-tags-status {
+    background-color: #f9b234;
+    margin-top: 25%;
+    color: #FFF;
+    padding: .3rem 0.6rem;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    /*position: absolute;*/
+    z-index: 2;
+}
+
+/*subcategories*/
+.sub-categories{
+    color: #39BB9D;
+}

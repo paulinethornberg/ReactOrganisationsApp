@@ -80,8 +80,8 @@ const CategoryFilterItem = (props) => {
         // <label htmlFor={codename}>{props.category.name}</label>
   if (codename === chosenFilter) {
     return (
-      <div >
-      <FontAwesome name={icon} size="4x" />
+      <div className="sub-categories">
+      <FontAwesome name={icon} size="5x" />
         <h3>{props.category.name}</h3>
         <SubCategoryFilter categories={categories} filter={props.filter} />
       </div>
@@ -121,10 +121,10 @@ const SubCategoryFilterItem = (props) => {
   }
 
   return (
-    <span className="checkbox js-postback">
+    <div className="checkbox js-postback col-lg-4">
       <input id={codename} type="checkbox" checked={checked} onChange={onChange} />
       <label htmlFor={codename}>{props.category.name}</label>
-    </span>
+    </div>
   );
 }
 export default SubCategories;
