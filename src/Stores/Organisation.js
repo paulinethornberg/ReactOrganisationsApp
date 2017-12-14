@@ -3,7 +3,7 @@ import Client from "../Client.js";
 let changeListeners = [];
 let initialized = false;
 let organisations = [];
-let aboutUs = [];
+let aboutUs = {};
 let organisationDetails = {};
 let organisationListCapacity = 0;
 let locations = ['hela_sverige'];
@@ -142,9 +142,10 @@ class OrganisationStore {
  async provideAboutUs() {
     await Client.items()
       .type('about_us')
+      .elementsParameter(['description', 'email'])
       .get()
       .subscribe(response => {
-        aboutUs = response.items;
+        aboutUs = response.items[0];
         console.log("hello from provide aboutUs " + aboutUs);
           notifyChange();
       });
