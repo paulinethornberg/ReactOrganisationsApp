@@ -6,8 +6,8 @@ import './index.css';
 import './myStyle.css';
 import App from './App';
 import HomePage from './Pages/Home';
-import AboutPage from './Pages/About';
 import OrganisationPage from './Pages/Organisation';
+import AboutPage from './Pages/About';
 import Category from './Components/Category';
 import FilteredOrganisations from './Pages/FilteredOrganisations'
 import registerServiceWorker from './registerServiceWorker';
@@ -21,6 +21,7 @@ ReactDOM.render((
         </IndexRoute>
       <Route name="organsiations" path="organisations" component={FilteredOrganisations} />
       <Route name= "organisation" path="organisations/:organisationSlug" component={OrganisationPage} />
+      <Route name= "about" path="about-us" component={AboutPage} />
     </Route>
   </Router>
 ), document.getElementById('root'));

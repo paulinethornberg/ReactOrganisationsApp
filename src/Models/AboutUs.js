@@ -3,15 +3,15 @@ import {  ContentItem } from 'kentico-cloud-delivery-typescript-sdk';
 export class AboutUs extends ContentItem {
     constructor(){
         super({
-            propertyResolver: ((fieldName) => {                
-                if (fieldName === 'url_pattern'){
-                    return 'urlPattern';
+            propertyResolver: ((fieldName) => {
+                if (fieldName === 'description'){
+                    return 'description';
                 }
-                if (fieldName === 'fact_about_us'){
-                    return 'factAboutUs';
+                if (fieldName === 'email'){
+                    return 'email';
                 }
             })
-        })    
+        })
     }
-    
+
 }

@@ -3,13 +3,14 @@ import Client from "../Client.js";
 let changeListeners = [];
 let initialized = false;
 let organisations = [];
+let aboutUs = [];
 let organisationDetails = {};
 let organisationListCapacity = 0;
 let locations = ['hela_sverige'];
 let categories = [];
 let chosenFilter = new String();
 let chosenLocation = new String();
-let chosenCategory = new String(); 
+let chosenCategory = new String();
 let subCategories = [];
 
 let notifyChange = () => {
@@ -75,7 +76,7 @@ export class Filter {
 
   toggleCategory(category) {
     let index = this.categories.indexOf(category);
-    
+
     if (index < 0) {
       this.categories.push(category);
       this.chosenCategory = category;
@@ -138,6 +139,16 @@ class OrganisationStore {
         });
   }
 
+ async provideAboutUs() {
+    await Client.items()
+      .type('about_us')
+      .get()
+      .subscribe(response => {
+        aboutUs = response.items;
+        console.log("hello from provide aboutUs " + aboutUs);
+          notifyChange();
+      });
+  }
 
   provideLocations() {
     fetchLocations();
@@ -167,6 +178,11 @@ class OrganisationStore {
 
   getCategories() {
     return categories;
+  }
+
+  getAboutUs() {
+    console.log(aboutUs);
+    return aboutUs;
   }
 
   getFilter() {

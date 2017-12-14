@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 let getState = () => {
   return {
     categories: OrganisationStore.getCategories(),
-    filter: OrganisationStore.getFilter()
+    filter: OrganisationStore.getFilter(),
   };
 };
 
@@ -22,6 +22,7 @@ class Category extends Component {
 componentDidMount() {
   OrganisationStore.addChangeListener(this.onChange);
   OrganisationStore.provideCategories();
+  OrganisationStore.provideAboutUs();
 }
 
   componentWillUnmount() {
@@ -71,6 +72,8 @@ const CategoryFilterItem = (props) => {
     props.filter.toggleCategory(codename);
     OrganisationStore.setFilter(props.filter);
     OrganisationStore.setChosenFilter(codename);
+    document.cookie = "category="+ codename;
+    var x = document.cookie;
   }
 
   let divStyle = {

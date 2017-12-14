@@ -39,13 +39,12 @@ class Organisations extends Component {
             }
             let tagValues = tag.value.map(x => x.name);
             // var icon = OrganisationStore.getIconForCategory(props.category.name);
+            let counter = 0;
             let tags = tagValues.map((tag) => {
-                return (<TagItem key={tag} tag={tag} />);
+                return (<TagItem key={tag + counter++} tag={tag} />);
             });
-
              return (
                 <span >
-                
                     {tags}
                 </span>
             );
@@ -76,7 +75,7 @@ class Organisations extends Component {
                                 <img alt={name} className="" src={imageLink} title={name} />
                             </figure>
                             <h1 className="notranslate">{name}</h1>
-                            
+
                             <div className="organisation-tags">
                                 <span>
                                     {category}

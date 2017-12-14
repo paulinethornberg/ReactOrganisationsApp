@@ -31,7 +31,7 @@
 }
   .goog-te-gadget {
         font-size: 19px !important;
-    }    
+    }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
     font-family: sans-serif;
@@ -1114,6 +1114,7 @@ p {
     display: block;
     padding-top: 20px;
     background: #fff;
+    color: #005B89;
     text-transform: uppercase;
     line-height: 5rem;
     font-size: 18px;
@@ -1127,26 +1128,30 @@ p {
     max-width: 300px;
 }
 }
-    
+
 .menu nav {
     display: inline-block;
     float: left;
 }
 .menu li:first-child > a:focus,
-/*.menu li:first-child > a:hover {
-    background-color: #005B89;
-}*/
+.menu li:first-child > a:hover {
+      /*background-color: #39BB9D;*/
+    color: #FFF;
+}
 .menu .CMSListMenuHighlightedLI > a,
 .menu a:focus,
 .menu a:hover {
     /*background-color: #39BB9D*/
 }
-.menu a,
+.menu-nav a{
+    color: #005B89;
+}
 .menu a:hover,
-.menu a:focus {
+.menu-nav a:focus {
     text-decoration: none;
-    /*background-color: #39BB9D;*/
+    background-color: #39BB9D;
     color: #FFF;
+    /*color: black;*/
 }
 .menu ul {
     list-style: none;
@@ -1165,7 +1170,8 @@ p {
 /*# Mobile menu button #*/
 #mobile-menu-btn {
     line-height: 3rem;
-    color: #fff;
+    /*color: #fff;*/
+     color: black;
     background: none;
     border: none;
     padding: 0 1rem;
@@ -1208,7 +1214,9 @@ p {
 .mobile-menu a:hover,
 .mobile-menu a:focus {
     text-decoration: none;
+    background-color: #39BB9D;
     color: #FFF;
+     /*color: black;*/
 }
 .mobile-menu ul {
     list-style: none;
@@ -1901,9 +1909,10 @@ header {
     margin: 0;
 }
 .logo-link,
-.logo-link:hover,
-.logo-link:focus {
+.logo-link a:hover,
+.logo-link a:focus {
     text-decoration: none;
+    background-color: transparent;
     color: #fff;
 }
 .logo {

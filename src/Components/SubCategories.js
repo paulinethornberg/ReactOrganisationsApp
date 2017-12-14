@@ -33,7 +33,6 @@ class SubCategories extends Component {
 
   render() {
     let categories = this.state.categories;
-    console.log(categories);
     let filter = this.state.filter;
     var subFilterStyle = {
       textAlign: 'center',
@@ -70,6 +69,13 @@ const CategoryFilterItem = (props) => {
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let chosenFilter = OrganisationStore.getChosenFilter();
+  if(chosenFilter === undefined) {
+    let cookieValue = document.cookie.match(new RegExp("category" + '=([^;]+)'));
+    if (cookieValue) chosenFilter = cookieValue[1];
+    props.filter.toggleCategory(chosenFilter);
+    // OrganisationStore.setFilter(props.filter);
+    OrganisationStore.setChosenFilter(chosenFilter);
+  }
   var icon = OrganisationStore.getIconForCategory(props.category.name);
   let onChange = () => {
     props.filter.toggleCategory(codename);

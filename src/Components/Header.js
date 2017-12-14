@@ -7,23 +7,26 @@ import Location from './Location';
 
 const Header = () => {
 
-        // 
+        //
   return (
     <div>
-   
+
     <header className="header" role="banner">
 
       <div className="menu">
         <div className="container">
          <IndexLink className="logo-link" to="/">
-         <img className="logo-link" src={HorizontalLogo}/> 
+         <img className="logo-link" src={HorizontalLogo}/>
          </IndexLink>
           <nav role="navigation">
-           <ul>
+           <ul className="menu-nav">
                <li>
                  <IndexLink to="/">Home</IndexLink>
               </li>
-    </ul>
+                <li>
+                 <IndexLink to="/about-us">Om asylkompassen</IndexLink>
+              </li>
+          </ul>
           </nav>
           <Location/>
         </div>
@@ -40,7 +43,7 @@ export default Header;
 
     //   <div className="menu">
     //     <div className="container">
-    //      <img style={style} src={Logo}/> 
+    //      <img style={style} src={Logo}/>
     //       <nav role="navigation">
     //         <ul>
     //           <li>
