@@ -9,7 +9,7 @@ const FilteredOrganisations = () => {
     <div>
       <Link to="/">
         <div className="back-arrow">
-          <FontAwesome size='5x' name='long-arrow-left' />
+          <FontAwesome size='4x' name='long-arrow-left' />
         </div>
       </Link>
       <div className="organisations-page row">

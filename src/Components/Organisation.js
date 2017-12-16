@@ -94,86 +94,74 @@ class Organisation extends Component {
         // let postDate = 'dateFormat';¨
         let description = organisation.description.value;
         let email = organisation.email.value;
-        let website = "i have no website";
+        let website = "";
         if (organisation.website.value) {
             website = organisation.website.value;
         }
         let phone = organisation.phone.value;
-
-        var central = {
-            width: '70%',
-            margin: '0 auto'
-        }
-
-        var tagContainer = {
-            paddingTop: '40px'
-        }
 
 
         return (
             <div className="organisation-page">
                 <Link to="organisations">
                     <div className="back-arrow">
-                        <FontAwesome size='5x' name='long-arrow-left' />
+                        <FontAwesome size='4x' name='long-arrow-left' />
                     </div>
                 </Link>
-                <div style={central} className="container">
+                <div className="container-organsiation">
                     <div >
 
                         <img alt={title} className="organisation-image" src={imageLink} title={title} />
                         <h2  className="organisation-title notranslate" >{title}</h2>
 
-                        <div className="notranslate">
+                        <div className="organiastion-contact-wrapper notranslate">
                             <div>
-                              <div className="organisation-contact-info" >
-                                <FontAwesome size='3x' name='globe' />
+                                <div className="organisation-contact-info" >
+                                    <FontAwesome size='2x' name='globe' />
                                 </div>
-                                <div className="organisation-contact-info-text"> 
-                                    {website}
+                                <div className="organisation-contact-info-text">
+                                    <a target="_blank" href={website}> {website} </a>
                                 </div>
                             </div>
                             <div >
-                             <div className="organisation-contact-info" >
-                                <FontAwesome size='3x' name='facebook' />
+                                <div className="organisation-contact-info" >
+                                    <FontAwesome size='2x' name='facebook' />
                                 </div>
                                 <div className="organisation-contact-info-text">
                                     facebook
                                 </div>
                             </div>
                             <div >
-                              <div className="organisation-contact-info" >
-                                <FontAwesome size='3x' name='phone' />
+                                <div className="organisation-contact-info" >
+                                    <FontAwesome size='2x' name='phone' />
                                 </div>
                                 <div className="organisation-contact-info-text">
                                     {phone}
                                 </div>
                             </div>
                             <div>
-                            <div className="organisation-contact-info" >
-                                <FontAwesome size='3x' name='envelope-o' />
-                            </div>
+                                <div className="organisation-contact-info" >
+                                    <FontAwesome size='2x' name='envelope-o' />
+                                </div>
                                 <div className="organisation-contact-info-text">
                                     {email}
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <div>
+                                <span className="product-tile">
+                                    {category}
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3  className="notranslate" >{title}</h3>
+                        </div>
                         <div dangerouslySetInnerHTML={{ __html: description }} >
 
                         </div>
-                        <div>
-                            <div style={tagContainer}>
-                                <div>
-                                    <span className="product-tile">
-                                        {location}
-                                    </span>
-                                </div>
-                                <div style={tagContainer}>
-                                    <span className="product-tile">
-                                        {category}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -182,12 +170,13 @@ class Organisation extends Component {
 }
 const TagItem = (props) => {
     var style = {
-        marginRight: '5px'
+        marginRight: '10px',
+        marginTop: '10px'
     }
     return (
-        <span style={style} className="organisation-tags-status">
+        <div style={style} className="organisation-tags-status">
             {props.tag}
-        </span>
+        </div>
     );
 }
 

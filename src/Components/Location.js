@@ -61,15 +61,12 @@ componentDidMount() {
     }
 
     return (
-      <div>
-      <div style={locationDiv}>
-        <FontAwesome name="map-marker" size="2x" />
-        </div>
         <div style={locationDiv}>
         <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
-      </div>
       </div>
     );
   }
 }
 export default Location;
+
+        // <FontAwesome name="map-marker" size="2x" />

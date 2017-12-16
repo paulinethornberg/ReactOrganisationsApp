@@ -80,13 +80,20 @@ const CategoryFilterItem = (props) => {
     paddingTop: '150px',
     paddingBottom: '150px'
   }
+   let innerDiv = {
+    width: '80%',
+    backgroundColor: 'white'
+  }
 
    return (
     <div >
      <Link to="organisations" onClick={onChange}>
       <div style={divStyle} className="col-lg-3 col-sm-6 col-xs-6">
+      <div style={innerDiv} >
      <h3>{props.category.name}</h3>
-     <FontAwesome name={icon} size="5x" />
+     <FontAwesome name={icon} size="4x" />
+     </div>
+
     </div>
     </Link>
 

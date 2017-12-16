@@ -3,7 +3,7 @@
 .back-arrow{
     color: #005B89;
     margin-top: 10px;
-    margin-left:70px;
+    margin-left:15%;
 }
 /*ORGANISATION PAGE*/
 .organisation-page h1{
@@ -20,8 +20,8 @@
 }
 .organisation-page {
  color: #005B89;
- margin-left:50px;
- margin-right:50px;
+ margin-left: 5%;
+ margin-right: 5%;
 }
 
 .organisation-image {
@@ -36,15 +36,20 @@
 .organisation-contact-info{
   color: #39BB9D;
   display: inline-block;
+  width: 50px;
 }
 .organisation-contact-info-text{
     padding-left: 30px;
-    font-weight: 500;
+    font-weight: 600;
     display: inline-block;
-    font-size: 26px;
+    font-size: 22px;
      color: #005B89;
      display: inline-block;
 }
+.organiastion-contact-wrapper {
+    margin-bottom: 40px;
+    margin-top: 30px;
+} 
 
 /*ORGANISATIONS PAGE*/
 .organisations-page {
@@ -86,12 +91,13 @@
     bottom: 0;
 }
 .organisation-tags-status {
+    display: inline-block;
     background-color: #f9b234;
     margin-top: 25%;
     color: #FFF;
     padding: .3rem 0.6rem;
     margin-top: 20%;
-    margin-bottom: 20%;
+    /*margin-bottom: 20%;*/
     /*position: absolute;*/
     z-index: 2;
 }
@@ -100,3 +106,60 @@
 .sub-categories{
     color: #39BB9D;
 }
+
+h1{
+    font-family: 'Lato', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: #005B89;
+    font-size: 20px;
+    font-weight: 550;
+    /*background-color: #f7f6f5;*/
+}
+
+/*# LocationFilter #*/
+.location-filter {
+    font-size: 26px;
+    text-align: right;
+    color: #005B89;
+}
+/*.location-filter div:hover {
+      background-color: #39BB9D;
+    color: #FFF;
+}*/
+.dropdown-placeholder {
+    font-size: 26px;
+}
+
+.container{
+    margin: 0 auto;
+    
+}
+.container-organsiation{
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+   .container-organsiation{
+    width: 100%;
+    }
+    .organisation-contact-info-text{
+        font-size:16px;
+    }
+    .organiastion-contact-wrapper{
+        margin-bottom:30px;
+    }
+    h2, h3 {
+        font-size: 20px;
+    }
+    body{
+        font-size:16px;
+    }
+}
+
+    

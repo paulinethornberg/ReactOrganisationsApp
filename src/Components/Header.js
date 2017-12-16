@@ -21,10 +21,10 @@ const Header = () => {
           <nav role="navigation">
            <ul className="menu-nav">
                <li>
-                 <IndexLink to="/">Home</IndexLink>
+                 <IndexLink to="/">Hem</IndexLink>
               </li>
                 <li>
-                 <IndexLink to="/about-us">Om asylkompassen</IndexLink>
+                 <IndexLink to="/about-us">Om Asylkompassen</IndexLink>
               </li>
           </ul>
           </nav>
