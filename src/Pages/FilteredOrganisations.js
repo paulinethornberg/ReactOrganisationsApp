@@ -5,6 +5,10 @@ import Organisations from "../Components/Organisations";
 import SubCategories from "../Components/SubCategories";
 
 const FilteredOrganisations = () => {
+  let style = {
+    display: 'block'
+  }
+
   return (
     <div>
       <Link to="/">
@@ -12,9 +16,11 @@ const FilteredOrganisations = () => {
           <FontAwesome size='4x' name='long-arrow-left' />
         </div>
       </Link>
-      <div className="organisations-page row">
-        <SubCategories />
-        <div >
+      <div style={style}>
+        <SubCategories />      
+        </div>
+      <div>
+        <div className="organisations-wrapper-div">
           <Organisations />
         </div>
       </div>

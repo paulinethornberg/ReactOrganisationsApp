@@ -68,8 +68,7 @@ class Organisations extends Component {
             let link = "organisations/" + organisation.slug.value;
 
             return (
-                <div className="organisations-page col-sm-6 col-md-6 col-xs-6 col-lg-3" key={index}>
-                    <article >
+                <div className="organisations-page col-sm-6 col-md-3 col-xs-6" key={index}>
                         <Link to={link} params={{organisationSlug: {name}}}>
                             <figure className="organisations-image">
                                 <img alt={name} className="" src={imageLink} title={name} />
@@ -82,16 +81,12 @@ class Organisations extends Component {
                                 </span>
                             </div>
                         </Link>
-                    </article>
                 </div>
             );
         });
 
-        let mainDiv = {
-            textAlign: 'center'
-        };
         return (
-            <div style={mainDiv} id="product-list">
+            <div>
                 {organisations}
             </div>
         );

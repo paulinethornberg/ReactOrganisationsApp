@@ -293,9 +293,7 @@ h5,
     line-height: 1.4;
     color: inherit;
 }
-.subcategories{
-  margin-left: 25px;
-}
+
 p {
     margin: 0 0 0.625rem;
     margin-bottom: 0.7rem;
@@ -1111,13 +1109,11 @@ p {
 }
 /*# Menu #*/
 .menu {
-    /*display: block;*/
-    padding-top: 20px;
     background: #fff;
     color: #005B89;
     text-transform: uppercase;
     line-height: 5rem;
-    font-size: 26px;
+    font-size: 22px;
 }
 .logo-link{
     display: inline-block;
@@ -1144,7 +1140,7 @@ p {
     /*background-color: #39BB9D*/
 }
 .menu-nav a{
-    color: #005B89;
+    color: #39BB9D;
 }
 .menu a:hover,
 .menu-nav a:focus {
@@ -1728,12 +1724,12 @@ dd.product-price--retail {
     content: "\e619";
 }
 
-.radio,
+/*.radio,
 .checkbox {
     display: block;
-}
+}*/
 .radio label,
-.checkbox label {
+/*.checkbox label {
     display: inline-block;
     cursor: pointer;
     position: relative;
@@ -1755,22 +1751,13 @@ dd.product-price--retail {
     left: 0;
     top: 2px;
     background-color: #ffffff;
-}
-.radio label:after,
+}*/
+/*.radio label:after,
 .checkbox label:after {
     background-color: transparent;
 }
 .radio input,
-.checkbox input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+
 .radio input[disabled] + label,
 .checkbox input[disabled] + label,
 .radio input:active[disabled] + label,
@@ -1878,7 +1865,7 @@ dd.product-price--retail {
 .radio-list-horizontal label,
 .checkbox-list-horizontal label {
     margin-right: 16px;
-}
+}*/
 
 /*# Page wrap #*/
 html,

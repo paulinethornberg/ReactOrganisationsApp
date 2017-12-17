@@ -76,10 +76,6 @@ const CategoryFilterItem = (props) => {
     var x = document.cookie;
   }
 
-  let divStyle = {
-    paddingTop: '150px',
-    paddingBottom: '150px'
-  }
    let innerDiv = {
     width: '80%',
     backgroundColor: 'white'
@@ -88,7 +84,7 @@ const CategoryFilterItem = (props) => {
    return (
     <div >
      <Link to="organisations" onClick={onChange}>
-      <div style={divStyle} className="col-lg-3 col-sm-6 col-xs-6">
+      <div className="category-div col-lg-3 col-sm-6 col-xs-6">
       <div style={innerDiv} >
      <h3>{props.category.name}</h3>
      <FontAwesome name={icon} size="4x" />

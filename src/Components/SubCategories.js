@@ -94,10 +94,7 @@ const CategoryFilterItem = (props) => {
     );
   }
   else {
-    return (
-      <div>
-      </div>
-    );
+    return null;
   }
 }
 

@@ -26,9 +26,16 @@ const Header = () => {
                 <li>
                  <IndexLink to="/about-us">Om Asylkompassen</IndexLink>
               </li>
+               <li>
+                   <Location/>
+              </li>
+               <li className="google-translate">
+                   <div id="google_translate_element"></div>
+              </li>
+              
           </ul>
           </nav>
-          <Location/>
+         
         </div>
       </div>
     </header>
