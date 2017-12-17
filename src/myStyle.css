@@ -57,7 +57,7 @@
     display: inline-block;
     margin-top: 1.25rem;
     text-align: center;
-    height: 450px;
+   
     width:25%;
     /*float: none; */
 }
@@ -65,12 +65,19 @@
 .organisations-wrapper-div{
     margin-top: 150px;
 }
+.organisations-page {
+     height: 450px;
+}
+
 }
 
 @media (max-width: 1110px) {
     .organisations-page { 
         width:50%
     }
+    .back-arrow{
+    display: none;
+}
     
 }
 
@@ -134,7 +141,10 @@ body{
     font-weight: 550;
     /*background-color: #f7f6f5;*/
 }
-
+/*.locatio-div {
+      display: inline-block;
+      float: right;
+    }*/
 /*# LocationFilter #*/
 .location-filter {
     font-size: 22px;
@@ -149,6 +159,7 @@ body{
       background-color: #39BB9D;
     color: #FFF;
 }*/
+
 .dropdown-placeholder {
     font-size: 14px;
 }
@@ -171,6 +182,21 @@ body{
     margin: 0 auto;
 }
 
+/*subcategories*/
+.sub-categories{
+    color: #39BB9D;
+    width: 70%;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.category-div{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
 @media (max-width: 767px) {
    .container-organsiation{
     width: 100%;
@@ -187,21 +213,57 @@ body{
     body{
         font-size:16px;
     }
+    .menu {
+        margin-top: 20px;
+    }
+    .menu a {
+        float: none;
+        margin: auto;
+    }
+    .menu li{
+        display: block;
+        width: 100%;
+        color: #39BB9D;
+    }
+    .menu a {
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .logo-link{
+        margin-bottom: -70px;
+    }
+    menu-nav a:focus{
+        background-color: #39BB9D;
+        color: #fff;
+    }
+    .menu li :focus{
+        background-color: #39BB9D;
+        color: #fff;
+    }
+    nav{
+        padding-top: -40px;
+    }
+    .location-filter {
+        display: block;
+        width: 100%;
+        float:left;
+        padding-right: 28%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        /*padding-left: -5%;*/
+    }
+    .category-div{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+    .category-wrapper{
+        width: 50%;
+        display: inline-block;
+    }
 }
 
-/*subcategories*/
-.sub-categories{
-    color: #39BB9D;
-    width: 70%;
-    font-size: 18px;
-    margin: auto;
-    margin-bottom: 50px;
-}
-
-.category-div{
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
 
 .checkbox {
     margin-top: 20px;
@@ -219,7 +281,7 @@ body{
     
 }
 .goog-te-gadget-simple{
-    border: none;
+    border: none !important;
     color:#39BB9D;    
 }
 

@@ -162,10 +162,6 @@ class OrganisationStore {
   // Methods
 
   getOrganisation(organisationSlug) {
-    // if(this.organisations === undefined) {
-    //   this.provideOrganisations();
-    // }
-    // return organisations.find((organisation) => organisation.slug.value === organisationSlug);
     return organisationDetails[organisationSlug];
   }
 

@@ -82,9 +82,9 @@ const CategoryFilterItem = (props) => {
   }
 
    return (
-    <div >
+    <div className="category-wrapper">
      <Link to="organisations" onClick={onChange}>
-      <div className="category-div col-lg-3 col-sm-6 col-xs-6">
+      <div className="category-div col-lg-3 col-sm-6">
       <div style={innerDiv} >
      <h3>{props.category.name}</h3>
      <FontAwesome name={icon} size="4x" />

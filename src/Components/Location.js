@@ -49,11 +49,7 @@ componentDidMount() {
       return {label: location.name, value: location.codename}
     });
     let chosenLocation = OrganisationStore.getChosenLocation();
-    let locationDiv = {
-      color: 'black',
-      display: 'inline-block',
-      float: 'right',
-    }
+
 
     let dropdownStyle = {
       color: 'white',
@@ -61,7 +57,7 @@ componentDidMount() {
     }
 
     return (
-        <div style={locationDiv}>
+        <div className="location-div" >
         <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
       </div>
     );
