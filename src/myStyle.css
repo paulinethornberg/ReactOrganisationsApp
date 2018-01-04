@@ -50,14 +50,14 @@
 .organiastion-contact-wrapper {
     margin-bottom: 40px;
     margin-top: 30px;
-} 
+}
 
 /*ORGANISATIONS PAGE*/
 .organisations-page {
     display: inline-block;
     margin-top: 1.25rem;
     text-align: center;
-   
+
     width:25%;
     /*float: none; */
 }
@@ -72,18 +72,18 @@
 }
 
 @media (max-width: 1110px) {
-    .organisations-page { 
+    .organisations-page {
         width:50%
     }
     .back-arrow{
     display: none;
 }
-    
+
 }
 
 .organisations-page h1{
    color: #005B89;
-   
+
    font-size: 20px;
    font-weight: 600;
 }
@@ -164,18 +164,18 @@ body{
     font-size: 14px;
 }
 .Dropdown-option{
-    
+
     margin: -50px;
     margin-right: 0px;
     font-size: 14px;
-    
+
 
 }
 
 .container{
-    width: 100%;    
+    width: 100%;
     margin: 0 auto;
-    
+
 }
 .container-organsiation{
     width: 70%;
@@ -196,7 +196,14 @@ body{
     padding-bottom: 100px;
 
 }
-
+.active-menu{
+    background-color: white;
+    color: #39BB9D;
+}
+.no-active-menu{
+    background-color: #39BB9D;
+    color: white;
+}
 @media (max-width: 767px) {
    .container-organsiation{
     width: 100%;
@@ -223,7 +230,7 @@ body{
     .menu li{
         display: block;
         width: 100%;
-        color: #39BB9D;
+        /*color: #39BB9D;*/
     }
     .menu a {
         display: block;
@@ -233,14 +240,14 @@ body{
     .logo-link{
         margin-bottom: -70px;
     }
-    menu-nav a:focus{
+    /*menu-nav a:focus{
         background-color: #39BB9D;
         color: #fff;
     }
     .menu li :focus{
         background-color: #39BB9D;
         color: #fff;
-    }
+    }*/
     nav{
         padding-top: -40px;
     }
@@ -256,7 +263,7 @@ body{
     .category-div{
         padding-top: 20px;
         padding-bottom: 20px;
-        
+
     }
     .category-wrapper{
         width: 50%;
@@ -268,7 +275,7 @@ body{
 .checkbox {
     margin-top: 20px;
     color: #005B89;
-    font-weight: 500;    
+    font-weight: 500;
 }
 .checkbox input {
     background-color: white;
@@ -278,11 +285,11 @@ body{
 }
 .goog-te-menu-value{
     color:#39BB9D;
-    
+
 }
 .goog-te-gadget-simple{
     border: none !important;
-    color:#39BB9D;    
+    color:#39BB9D;
 }
 
 .goog-te-gadget-icon{
@@ -308,7 +315,7 @@ body{
 }*/
 
 /*#google_translate_element {
-    position: absolute; 
+    position: absolute;
     padding: 40px 0px;
     padding-left: 20%;
 }*/
