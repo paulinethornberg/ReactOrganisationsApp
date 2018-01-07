@@ -73,6 +73,7 @@ class Organisation extends Component {
 
             return (
                 <span >
+
                     {tags}
                 </span>
             );

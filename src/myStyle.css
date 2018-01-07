@@ -24,7 +24,15 @@
  margin-left: 5%;
  margin-right: 5%;
 }*/
-
+.organisations-page{
+    /*margin: 10px;*/
+    border: solid white 15px;
+    /*border: solid #f8f9fa 15px;*/
+    padding-top:10px;
+    background-color:#f8f9fa;
+    /*background-color:white;*/
+    
+}
 .organisation-image {
     width: 300px;
     display:block;
@@ -101,16 +109,18 @@
 }
 .organisations-image img {
     height: auto;
-    width: 70%;
+    width: 60%;
     display:block;
     margin-left: auto;
     margin-right: auto;
 }
 .organisation-tags {
     font-size:12px;
-    padding: 1.25rem;
+    padding: 1rem;
     /*position: absolute;*/
     bottom: 0;
+    /*background-color: white;*/
+    border-top: solid #005B89 1px;
 }
 .organisation-tags-status {
     display: inline-block;
@@ -122,6 +132,21 @@
     /*margin-bottom: 20%;*/
     /*position: absolute;*/
     z-index: 2;
+}
+
+/*ORANGE TAGS*/
+.organisation-listings-tags-status {
+    display: inline-block;
+    /*background-color: #fff;*/
+    margin-top: 25%;
+    color: #39BB9D;
+    padding: .3rem;
+    margin-top: 20%;
+    /*margin-bottom: 20%;*/
+    /*position: absolute;*/
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 
@@ -182,10 +207,13 @@ body{
 /*subcategories*/
 .sub-categories{
     color: #39BB9D;
-    width: 70%;
+    width: 60%;
     font-size: 18px;
     margin: auto;
-    margin-bottom: 50px;
+    padding-bottom: 70px;
+    background-color: #f8f9fa;
+    /*background-color: white;*/
+    padding-top: 20px;
 }
 
 .category-div{
@@ -194,8 +222,9 @@ body{
 
 }
 @media (min-width: 1111px) {
-.organisations-wrapper-div{
+/*.organisations-wrapper-div{
     margin-top: 150px;
+}*/
 }
 @media (max-width: 767px) {
    .container-organsiation{
@@ -288,7 +317,13 @@ body{
 .goog-te-gadget-icon{
     display: none;
 }
+
+/*body{
+    background-color: #f8f9fa;
 }
+.menu{
+    background-color: #f8f9fa;    
+}*/
 /*.google-translate {
     margin-top:20px;
     margin-bottom: 5px;

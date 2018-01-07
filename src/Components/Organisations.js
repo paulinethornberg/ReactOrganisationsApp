@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 import OrganisationStore from "../Stores/Organisation";
 import PeopleImage from '../Images/people.jpg';
+import FontAwesome from 'react-fontawesome';
 
 let getState = () => {
     return {
@@ -50,6 +51,8 @@ class Organisations extends Component {
             );
 
         }
+        console.log(this.state.organisations);
+        console.log(this.state.filter);
 
         let filter = (organisation) => {
             return this.state.filter.matches(organisation);
@@ -101,8 +104,8 @@ const TagItem = (props) => {
         marginBottom: '5px',
     }
     return (
-       <span style={style} className=" organisation-tags-status">
-            {props.tag}
+       <span style={style} className=" organisation-listings-tags-status">
+            {props.tag},
         </span>
     );
 }

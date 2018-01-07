@@ -69,9 +69,15 @@ export class Filter {
   }
 
   toggleLocation(location) {
-    let index = this.locations.indexOf(location);
-
-    if (index < 0) this.locations.push(location); else this.locations.splice(index, 1);
+    // let locations = ['hela_sverige'];
+    this.locations = ['hela_sverige'];
+    this.locations.push(location);
+    if(location === 'hela_sverige'){
+      this.locations = [];
+    }
+    notifyChange();
+    // let index = this.locations.indexOf(location);
+    // if (index < 0) this.locations.push(location); else this.locations.splice(index, 1);
   }
 
   toggleCategory(category) {
@@ -202,6 +208,7 @@ class OrganisationStore {
   setChosenLocation(location) {
     this.chosenLocation = location;
     ("chosenLocationNow: " + this.chosenLocation);
+    notifyChange();
   }
 
 //No filter functions, just to show chosen filter

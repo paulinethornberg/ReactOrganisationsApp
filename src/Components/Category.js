@@ -78,7 +78,9 @@ const CategoryFilterItem = (props) => {
 
    let innerDiv = {
     width: '80%',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    paddingTop: '40px',
+    paddingBottom: '40px'
   }
 
    return (
