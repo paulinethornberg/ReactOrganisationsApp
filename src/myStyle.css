@@ -61,10 +61,7 @@
     width:25%;
     /*float: none; */
 }
-@media (min-width: 1111px) {
-.organisations-wrapper-div{
-    margin-top: 150px;
-}
+
 .organisations-page {
      height: 450px;
 }
@@ -196,7 +193,10 @@ body{
     padding-bottom: 100px;
 
 }
-
+@media (min-width: 1111px) {
+.organisations-wrapper-div{
+    margin-top: 150px;
+}
 @media (max-width: 767px) {
    .container-organsiation{
     width: 100%;
