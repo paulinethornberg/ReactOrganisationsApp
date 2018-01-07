@@ -112,7 +112,7 @@ class OrganisationStore {
     await Client.items()
       .type('organisation')
       .equalsFilter('elements.slug', organisationSlug)
-      .elementsParameter(['name', 'description', 'image', 'phone', 'website', 'email', 'location', 'category'])
+      .elementsParameter(['name', 'description', 'image', 'phone', 'website', 'facebook', 'email', 'location', 'category'])
       .get()
       .subscribe(response => {
         // response = response.json();
@@ -146,7 +146,6 @@ class OrganisationStore {
       .get()
       .subscribe(response => {
         aboutUs = response.items[0];
-        console.log("hello from provide aboutUs " + aboutUs);
           notifyChange();
       });
   }
@@ -178,7 +177,6 @@ class OrganisationStore {
   }
 
   getAboutUs() {
-    console.log(aboutUs);
     return aboutUs;
   }
 

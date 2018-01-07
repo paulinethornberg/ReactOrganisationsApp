@@ -3,7 +3,6 @@ import OrganisationStore from '../Stores/Organisation';
 import FontAwesome from 'react-fontawesome';
 
 let getState = (props) => {
-  console.log("hello from state");
   return {
     aboutUs: OrganisationStore.getAboutUs()
   };
@@ -38,13 +37,11 @@ class About extends Component {
   render() {
     let about = this.state.aboutUs;
     if (!about) {
-      console.log("hello form not about");
       return (
         <div className="container"></div>
       );
     } else {
 
-      console.log("this state" + about.email.value);
       let email = about.email.value;
       let description = about.description.value;
       return (

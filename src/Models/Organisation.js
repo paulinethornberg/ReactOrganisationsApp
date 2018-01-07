@@ -13,6 +13,9 @@ export class Organisation extends ContentItem {
                 if (fieldName === 'website'){
                     return 'website';
                 }
+                 if (fieldName === 'facebook'){
+                    return 'facebook';
+                }
                  if (fieldName === 'image'){
                     return 'image';
                 }

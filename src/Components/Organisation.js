@@ -67,7 +67,6 @@ class Organisation extends Component {
                 return <span />
             }
             let tagValues = tag.value.map(x => x.name);
-
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag} tag={tag} />);
             });
@@ -97,6 +96,10 @@ class Organisation extends Component {
         let website = "";
         if (organisation.website.value) {
             website = organisation.website.value;
+        }
+        let facebook = "";
+        if (organisation.facebook.value) {
+            facebook = organisation.facebook.value;
         }
         let phone = organisation.phone.value;
 
@@ -128,7 +131,7 @@ class Organisation extends Component {
                                     <FontAwesome size='2x' name='facebook' />
                                 </div>
                                 <div className="organisation-contact-info-text">
-                                    facebook
+                                    {facebook}
                                 </div>
                             </div>
                             <div >
