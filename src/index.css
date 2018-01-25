@@ -306,12 +306,12 @@ p {
     line-height: 1.4;
 }
 /*# Grid #*/
-.container {
+/*.container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 8px;
     padding-right: 8px;
-}
+}*/
 .row {
     margin-left: -0.5px;
     margin-right: -0.5px;
@@ -538,9 +538,9 @@ p {
     margin-left: 0%;
 }
 @media (min-width: 500px) {
-    .container {
+    /*.container {
         width: 484px;
-    }
+    }*/
     .col-sm-1,
     .col-sm-2,
     .col-sm-3,
@@ -710,9 +710,9 @@ p {
     }
 }
 @media (min-width: 768px) {
-    .container {
+    /*.container {
         width: 752px;
-    }
+    }*/
     .col-md-1,
     .col-md-2,
     .col-md-3,
@@ -1113,14 +1113,14 @@ p {
     color: #005B89;
     text-transform: uppercase;
     line-height: 5rem;
-    font-size: 22px;
+    font-size: 18px;
 }
-.logo-link{
+.logo-link-image{
     display: inline-block;
-    max-width: 500px;
+    max-width: 350px;
 }
 @media (max-width: 499px) {
- .logo-link{
+ .logo-link-image{
     max-width: 100%;
 }
 }
@@ -1166,8 +1166,8 @@ p {
 .menu a {
     padding-top:20px;
     padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /*# Mobile menu button #*/
 #mobile-menu-btn {
@@ -2134,7 +2134,7 @@ footer {
 }
 .pagination > li > a {
     color: black;
-    padding: 3px 5px;
+    /*padding: 3px 5px;*/
     text-decoration: none;
 }
 .pagination > li > a:hover,

@@ -1,12 +1,20 @@
 import React from 'react';
 import CategoryComponent from '../Components/Category';
-import LocationComponent from '../Components/Location';
+import LocationHomeComponent from '../Components/LocationHome';
 
 const Home = () => {
   return (
+    
     <div className="container">
-        <CategoryComponent/>
-    </div>
+    
+     <keep-alive>
+      <CategoryComponent/>
+        </keep-alive>
+   
+    
+
+ </div>
+
   );
 }
 

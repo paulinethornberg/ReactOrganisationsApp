@@ -45,7 +45,7 @@ class About extends Component {
       let email = about.email.value;
       let description = about.description.value;
       return (
-        <div className="container">
+        <div className="container about-container">
           <div className="organisation-contact-info" >
             <FontAwesome size='3x' name='envelope-o' />
           </div>

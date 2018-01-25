@@ -12,7 +12,7 @@ let getState = () => {
   };
 };
 
-class Location extends Component {
+class LocationHome extends Component {
   constructor(props) {
     super(props);
 
@@ -57,12 +57,12 @@ componentDidMount() {
     }
 
     return (
-        <div className="location-div menu-location" >
-        <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
+        <div className="location-div location-home-div" >
+        <Dropdown  className="location-filter location-home-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
       </div>
     );
   }
 }
-export default Location;
+export default LocationHome;
 
         // <FontAwesome name="map-marker" size="2x" />

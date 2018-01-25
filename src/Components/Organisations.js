@@ -44,6 +44,9 @@ class Organisations extends Component {
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag + counter++} tag={tag} />);
             });
+            if(tags.length > 8){
+                tags = tags.slice(0,8);
+            }
              return (
                 <span >
                     {tags}
@@ -51,8 +54,6 @@ class Organisations extends Component {
             );
 
         }
-        console.log(this.state.organisations);
-        console.log(this.state.filter);
 
         let filter = (organisation) => {
             return this.state.filter.matches(organisation);

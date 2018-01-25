@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, IndexLink } from 'react-router'
+import { IndexLink } from 'react-router'
 import BackgroundImage from '../Images/header.png';
 import Logo from '../Images/Asylkompassen_Reversed.png';
 import HorizontalLogo from '../Images/Asylkompassen_Horizontal.png';
@@ -16,10 +16,11 @@ const Header = () => {
       <div className="menu">
         <div className="container">
          <IndexLink className="logo-link" to="/">
-         <img className="logo-link" src={HorizontalLogo}/>
+         <img className="logo-link-image" src={HorizontalLogo}/>
          </IndexLink>
           <nav role="navigation">
            <ul className="menu-nav">
+          
                <li>
                  <IndexLink to="/">Hem</IndexLink>
               </li>
@@ -29,9 +30,7 @@ const Header = () => {
                <li>
                    <Location/>
               </li>
-               <li className="google-translate">
-                   <div id="google_translate_element"></div>
-              </li>
+              
               
           </ul>
           </nav>
@@ -46,22 +45,6 @@ const Header = () => {
 
 export default Header;
 
-    // <header className="header" role="banner">
-
-    //   <div className="menu">
-    //     <div className="container">
-    //      <img style={style} src={Logo}/>
-    //       <nav role="navigation">
-    //         <ul>
-    //           <li>
-    //             <IndexLink to="/">Home</IndexLink>
-    //           </li>
-    //           <li>
-    //             <Link to="/organisations">organisations</Link>
-    //           </li>
-    //         </ul>
-    //       </nav>
-    //       <Location/>
-    //     </div>
-    //   </div>
-    // </header>
+  // <li className="google-translate">
+  //                  <div id="google_translate_element"></div>
+  //             </li>

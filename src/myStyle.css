@@ -71,18 +71,16 @@
 }
 
 .organisations-page {
-     height: 450px;
+     height: 500px;
 }
-
-
 
 @media (max-width: 1110px) {
     .organisations-page { 
         width:50%
     }
-    .back-arrow{
+    /*.back-arrow{
     display: none;
-}
+}*/
     
 }
 
@@ -110,6 +108,8 @@
 .organisations-image img {
     height: auto;
     width: 60%;
+    max-width: 250px;
+    max-height:250px;
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -169,13 +169,13 @@ body{
     }*/
 /*# LocationFilter #*/
 .location-filter {
-    font-size: 22px;
+    font-size: 18px;
     text-align: right;
     color: #39BB9D;
       padding-top:20px;
     padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /*.location-filter div:hover {
       background-color: #39BB9D;
@@ -194,6 +194,30 @@ body{
 
 }
 
+.google-translate{
+    display: inline-block;
+    padding: 50px;
+    font-size: 24px;
+}
+.location-div{
+    display: inline-block;
+}
+.location-wrapper{
+    display: inline-block;
+    padding: 50px;
+}
+.location-language-selector-wrapper{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center; 
+    background-color:#f8f9fa;
+}
+.intro-div{
+    background-color:#f8f9fa;
+    text-align: center;    
+    padding-top: 40px;
+}
+
 .container{
     width: 100%;    
     margin: 0 auto;
@@ -210,25 +234,111 @@ body{
     width: 60%;
     font-size: 18px;
     margin: auto;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
     background-color: #f8f9fa;
     /*background-color: white;*/
     padding-top: 20px;
+    border: solid #f8f9fa 10px; 
 }
-
+.subcategories{
+    padding-bottom: 150px;
+    display: block;
+    font-size: 14px; 
+    padding-left: 15%; 
+    padding-right: 5%;
+}
+.about-container{
+    width: 70%;
+}
 .category-div{
     padding-top: 100px;
     padding-bottom: 100px;
 
 }
-@media (min-width: 1111px) {
-/*.organisations-wrapper-div{
-    margin-top: 150px;
-}*/
+.home-page-top-wrapper{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.intro-div{
+    font-size:20px;
+}
+.location-home-filter {
+    font-size: 24px;
+}
+.location-home-div{
+    font-size: 24px;
+} 
+@media (min-width: 1024px) {
+      .category-wrapper{
+          width: 25%;
+          display: inline-block;
+          margin:auto;
+      }
+}
+@media (min-width: 767px){
+     .float-left{
+    float: left;
+}
+}
+@media (max-width: 848px) {
+ .logo-link-image{
+    max-width: 60%;
+}
+.menu a {
+    padding-top: 0px;
+    padding-bottom:0px;
+}
+.logo-link{
+    margin-bottom: -30px;
+}
+.menu-location{
+    display: none;
+}
+li{
+    padding-left: 30px;
+}
+header{
+    margin-bottom: 10px;
+}
+}
+@media (max-width: 499px) {
+ .logo-link-image{
+    max-width: 100%;
+}
+}
+@media (max-width: 1023px){
+        .category-wrapper{
+        width: 50%;
+        display: inline-block;
+        margin: auto;
+    }
 }
 @media (max-width: 767px) {
+  .sub-categories{
+      padding-bottom: 0px;
+  }
+    .subcategories{
+    padding-left: 5%; 
+    padding-right: 2%;
+}
+.about-container{
+    width: 90%;
+}
+   .intro-div{
+    font-size: 18px;
+}
+.google-translate{
+    display: block;
+}
+.location-div{
+    display: block;
+}
+ .menu nav {
+     display:none;
+ }
    .container-organsiation{
-    width: 100%;
+    width: 90%;
     }
     .organisation-contact-info-text{
         font-size:16px;
@@ -236,13 +346,16 @@ body{
     .organiastion-contact-wrapper{
         margin-bottom:30px;
     }
+    .organisations-page h1{
+        font-size: 16px;
+    }
     h2, h3 {
         font-size: 20px;
     }
     body{
         font-size:16px;
     }
-    .menu {
+    /*.menu {
         margin-top: 20px;
     }
     .menu a {
@@ -258,26 +371,32 @@ body{
         display: block;
         padding-top: 0px;
         padding-bottom: 0px;
-    }
+        width: 100%;
+    }*/
     .logo-link{
-        margin-bottom: -70px;
+        display: block;
     }
-    menu-nav a:focus{
+    /*menu-nav a:focus{
         background-color: #39BB9D;
         color: #fff;
+        background-size: cover;
+    }
+    .menu nav{
+        display: block;
     }
     .menu li :focus{
         background-color: #39BB9D;
         color: #fff;
     }
-    nav{
-        padding-top: -40px;
-    }
+    .menu ul{
+        display: block;
+    }*/
+
     .location-filter {
         display: block;
         width: 100%;
-        float:left;
-        padding-right: 28%;
+        /*float:left;*/
+        /*padding-right: 28%;*/
         padding-top: 0px;
         padding-bottom: 0px;
         /*padding-left: -5%;*/
@@ -290,7 +409,9 @@ body{
     .category-wrapper{
         width: 50%;
         display: inline-block;
+        margin: auto;
     }
+   
 }
 
 
@@ -312,6 +433,7 @@ body{
 .goog-te-gadget-simple{
     border: none !important;
     color:#39BB9D;    
+    font-size: 16pt;
 }
 
 .goog-te-gadget-icon{

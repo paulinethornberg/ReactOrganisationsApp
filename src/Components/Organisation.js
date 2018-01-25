@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router'
+import { Link } from 'react-router'
 import FontAwesome from 'react-fontawesome';
 import OrganisationStore from '../Stores/Organisation';
 import dateFormat from 'dateformat';
@@ -20,35 +20,21 @@ class Organisation extends Component {
     };
     constructor(props) {
         super(props);
-        // this.state = getState(props);
         this.onChange = this.onChange.bind(this);
     }
 
     async componentDidMount() {
-        //after render when DOM exists - integrate with kenticoCloud
-
         await OrganisationStore.provideOrganisation(this.props.props.params.organisationSlug).then(
             this.state = getState(this.props));
         OrganisationStore.addChangeListener(this.onChange);
-        //    OrganisationStore.provideOrganisation(this.props.props.params.organisationSlug).then(
-        //         this.setState(getState(this.props))
-        //    );
-        // let organisation = OrganisationStore.getOrganisation(this.props.props.params.organisationSlug);
-
     }
 
     componentWillMount() {
-        //Set initial state?
         // this.state = getState(this.props);
     }
     componentWillUnmount() {
         OrganisationStore.removeChangeListener(this.onChange);
     }
-
-    // TODO:  undersök vad som händer med renderingen
-    // shouldComponentUpdate(){
-    //     return false;
-    // }
 
     onChange() {
         this.setState(getState(this.props));
@@ -79,10 +65,6 @@ class Organisation extends Component {
             );
 
         }
-
-        let formatDate = (value) => {
-            return dateFormat(value, "dddd, mmmm d, yyyy");
-        };
 
         let location = renderTags(organisation.location);
         let category = renderTags(organisation.category);

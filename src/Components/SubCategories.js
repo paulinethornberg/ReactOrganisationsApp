@@ -124,9 +124,9 @@ const SubCategoryFilterItem = (props) => {
   }
 
   return (
-    <div className="checkbox js-postback col-lg-4">
-      <input id={codename} type="checkbox" checked={checked} onChange={onChange} />
-      <label htmlFor={codename}>{props.category.name}</label>
+    <div className="checkbox js-postback col-md-4">
+      <input className="float-left" id={codename} type="checkbox" checked={checked} onChange={onChange} />
+      <label className="float-left" htmlFor={codename}>{props.category.name}</label>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import Client from "../Client.js";
 
 let changeListeners = [];
-let initialized = false;
 let organisations = [];
 let aboutUs = {};
 let organisationDetails = {};
@@ -151,8 +150,10 @@ class OrganisationStore {
       .elementsParameter(['description', 'email'])
       .get()
       .subscribe(response => {
-        aboutUs = response.items[0];
+        if(!response.isEmpty) {
+          aboutUs = response.items[0];
           notifyChange();
+        }
       });
   }
 
@@ -238,28 +239,28 @@ class OrganisationStore {
     });
   }
    getIconForCategory(category) {
-    if(category == "Juridisk rådgivning"){
+    if(category === "Juridisk rådgivning"){
       return 'gavel';
     }
-    if(category == "Mat & Boende"){
+    if(category === "Mat & Boende"){
       return 'home';
     }
-    if(category == "Hälsa"){
+    if(category === "Hälsa"){
       return 'medkit';
     }
-    if(category == "Kvinna"){
+    if(category === "Kvinna"){
       return 'venus';
     }
-    if(category == "Socialt (stöd/umgänge)"){
+    if(category === "Socialt (stöd/umgänge)"){
       return 'users';
     }
-    if(category == "Arbete & utbildning"){
+    if(category === "Arbete & utbildning"){
       return 'briefcase';
     }
-    if(category == "Barn"){
+    if(category === "Barn"){
       return 'child';
     }
-    if(category == "HBTQI+"){
+    if(category === "HBTQI+"){
       return 'transgender-alt';
     }
   }

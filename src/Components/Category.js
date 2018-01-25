@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router'
+import { Link } from 'react-router'
 import OrganisationStore from '../Stores/Organisation';
-import PeopleImage from '../Images/people.jpg';
 import FontAwesome from 'react-fontawesome';
 
 let getState = () => {
@@ -77,7 +76,7 @@ const CategoryFilterItem = (props) => {
   }
 
    let innerDiv = {
-    width: '80%',
+    // width: '80%',
     backgroundColor: 'white',
     paddingTop: '40px',
     paddingBottom: '40px'
@@ -86,7 +85,7 @@ const CategoryFilterItem = (props) => {
    return (
     <div className="category-wrapper">
      <Link to="organisations" onClick={onChange}>
-      <div className="category-div col-lg-3 col-sm-6">
+      <div className="category-div">
       <div style={innerDiv} >
      <h3>{props.category.name}</h3>
      <FontAwesome name={icon} size="4x" />

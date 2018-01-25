@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import { Link, IndexLink } from 'react-router'
+import { Link } from 'react-router'
 import Organisations from "../Components/Organisations";
 import SubCategories from "../Components/SubCategories";
 
