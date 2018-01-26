@@ -4,6 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import OrganisationStore from '../Stores/Organisation';
 import dateFormat from 'dateformat';
 import PeopleImage from '../Images/people.jpg';
+import Scroll from 'react-scroll';
 
 let getState = (props) => {
     return {
@@ -27,6 +28,9 @@ class Organisation extends Component {
         await OrganisationStore.provideOrganisation(this.props.props.params.organisationSlug).then(
             this.state = getState(this.props));
         OrganisationStore.addChangeListener(this.onChange);
+        Scroll.Events.scrollEvent.register('begin', function(to, element) {
+            console.log("begin", arguments);
+        });
     }
 
     componentWillMount() {
@@ -86,6 +90,8 @@ class Organisation extends Component {
         }
         let phone = organisation.phone.value;
 
+        Scroll.animateScroll.scrollTo(500);
+
 
         return (
             <div className="organisation-page">
@@ -101,7 +107,7 @@ class Organisation extends Component {
                         <h2  className="organisation-title notranslate" >{title}</h2>
 
                         <div className="organiastion-contact-wrapper notranslate">
-                            <div>
+                            <div style={{display: website ? 'block' : 'none' }}>
                                 <div className="organisation-contact-info" >
                                     <FontAwesome size='2x' name='globe' />
                                 </div>
@@ -109,7 +115,7 @@ class Organisation extends Component {
                                     <a target="_blank" href={website}> {website} </a>
                                 </div>
                             </div>
-                            <div >
+                            <div style={{display: facebook ? 'block' : 'none' }} >
                                 <div className="organisation-contact-info" >
                                     <FontAwesome size='2x' name='facebook' />
                                 </div>
@@ -117,7 +123,7 @@ class Organisation extends Component {
                                     {facebook}
                                 </div>
                             </div>
-                            <div >
+                            <div style={{display: phone ? 'block' : 'none' }}>
                                 <div className="organisation-contact-info" >
                                     <FontAwesome size='2x' name='phone' />
                                 </div>
@@ -125,7 +131,7 @@ class Organisation extends Component {
                                     {phone}
                                 </div>
                             </div>
-                            <div>
+                            <div style={{display: email ? 'block' : 'none' }}>
                                 <div className="organisation-contact-info" >
                                     <FontAwesome size='2x' name='envelope-o' />
                                 </div>

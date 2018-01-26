@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import OrganisationStore from '../Stores/Organisation';
 import FontAwesome from 'react-fontawesome';
 
-let getState = (props) => {
+let getState = () => {
   return {
     aboutUs: OrganisationStore.getAboutUs()
   };
@@ -10,7 +10,7 @@ let getState = (props) => {
 
 class About extends Component {
   state = {
-    org: {}
+    about: {}
   }
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ class About extends Component {
 
   async componentDidMount() {
     await OrganisationStore.provideAboutUs().then(
-      this.state = getState(this.props)
+      this.state = getState()
     );
     OrganisationStore.addChangeListener(this.onChange);
   }
@@ -31,7 +31,7 @@ class About extends Component {
   }
 
   onChange() {
-    this.setState(getState(this.props));
+    this.setState(getState());
   }
 
   render() {

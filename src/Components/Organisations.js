@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import OrganisationStore from "../Stores/Organisation";
 import PeopleImage from '../Images/people.jpg';
 import FontAwesome from 'react-fontawesome';
+import Scroll from 'react-scroll';
 
 let getState = () => {
     return {
@@ -23,6 +24,9 @@ class Organisations extends Component {
     componentDidMount() {
         OrganisationStore.addChangeListener(this.onChange);
         OrganisationStore.provideOrganisations();
+         Scroll.Events.scrollEvent.register('begin', function(to, element) {
+            console.log("begin", arguments);
+        });
     }
 
     componentWillUnmount() {
@@ -70,6 +74,7 @@ class Organisations extends Component {
             // let location = renderTags(organisation.location);
             let category = renderTags(organisation.category);
             let link = "organisations/" + organisation.slug.value;
+            Scroll.animateScroll.scrollTo(450);
 
             return (
                 <div className="organisations-page col-sm-6 col-md-3 col-xs-6" key={index}>
