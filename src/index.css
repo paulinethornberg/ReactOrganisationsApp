@@ -1125,10 +1125,6 @@ p {
 }
 }
 
-.menu nav {
-    display: inline-block;
-    /*float: left;*/
-}
 .menu li > a:focus,
 .menu li > a:hover {
       background-color: #39BB9D;

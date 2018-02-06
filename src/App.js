@@ -7,7 +7,7 @@ const App = (props) => {
     <div>
       <Header />
      <div className="home-page-top-wrapper">
-        <div className="intro-div">Välj språk och stad nedan för att hitta organisationer, lokala initiativ och annat annat användbart för asylsökande</div>
+        <div className="intro-div">Välj språk och stad nedan för att hitta organisationer, lokala initiativ och grupper för asylsökande</div>
         <div className="location-language-selector-wrapper">
           <div className="google-translate">
             <div id="google_translate_element"></div>

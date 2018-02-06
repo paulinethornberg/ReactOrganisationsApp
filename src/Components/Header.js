@@ -15,9 +15,12 @@ const Header = () => {
 
       <div className="menu">
         <div className="container">
+        <span className="logo-menu">
          <IndexLink className="logo-link" to="/">
          <img className="logo-link-image" src={HorizontalLogo}/>
+         
          </IndexLink>
+         </span>
           <nav role="navigation">
            <ul className="menu-nav">
           
