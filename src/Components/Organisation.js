@@ -56,7 +56,9 @@ class Organisation extends Component {
             if (tag.value.length === 0) {
                 return <span />
             }
+            console.log(tag);
             let tagValues = tag.value.map(x => x.name);
+            console.log(tagValues);
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag} tag={tag} />);
             });
@@ -80,9 +82,14 @@ class Organisation extends Component {
         // let postDate = 'dateFormat';¨
         let description = organisation.description.value;
         let email = organisation.email.value;
+        let website_short_url = "";
         let website = "";
         if (organisation.website.value) {
             website = organisation.website.value;
+            website_short_url = organisation.website.value;
+        }
+        if(organisation.website_short_url.value) {
+            website_short_url = organisation.website_short_url.value;
         }
         let facebook = "";
         if (organisation.facebook.value) {
@@ -112,7 +119,7 @@ class Organisation extends Component {
                                     <FontAwesome size='2x' name='globe' />
                                 </div>
                                 <div className="organisation-contact-info-text">
-                                    <a target="_blank" href={website}> {website} </a>
+                                    <a target="_blank" href={website}> {website_short_url} </a>
                                 </div>
                             </div>
                             <div style={{display: facebook ? 'block' : 'none' }} >
@@ -150,7 +157,7 @@ class Organisation extends Component {
                         <div>
                             <h3  className="notranslate" >{title}</h3>
                         </div>
-                        <div dangerouslySetInnerHTML={{ __html: description }} >
+                        <div  dangerouslySetInnerHTML={{ __html: description }} >
 
                         </div>
 

@@ -117,7 +117,7 @@ class OrganisationStore {
     await Client.items()
       .type('organisation')
       .equalsFilter('elements.slug', organisationSlug)
-      .elementsParameter(['name', 'description', 'image', 'phone', 'website', 'facebook', 'email', 'location', 'category'])
+      .elementsParameter(['name', 'description', 'image', 'phone', 'website', 'website_short_url', 'facebook', 'email', 'location', 'category'])
       .get()
       .subscribe(response => {
         // response = response.json();
