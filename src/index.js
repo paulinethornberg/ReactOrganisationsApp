@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory, applyRouterMiddleware } from 'react-router'
-import { browserHistory } from 'react-router';
 import { useScroll } from 'react-router-scroll';
 import './index.css';
 import './myStyle.css';
@@ -15,7 +14,7 @@ import FilteredOrganisations from './Pages/FilteredOrganisations'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
- <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
+ <Router history={hashHistory} render={applyRouterMiddleware(useScroll())}>
     <Route name="app" path="/" component={App}>
       <IndexRoute name="home" component={HomePage}>
         <IndexRedirect to="categories" />
