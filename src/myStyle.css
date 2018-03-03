@@ -491,7 +491,7 @@ header{
 } */
 
 .goog-te-gadget {
-    color: #f8f9fa
+    color: #f8f9fa!important;
 }
 .goog-logo-link{
     display:none; 
