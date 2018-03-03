@@ -198,9 +198,16 @@ body{
     display: inline-block;
     padding: 50px;
     font-size: 24px;
+    cursor: pointer;
+    
+}
+select{
+    cursor: pointer;    
 }
 .location-div{
     display: inline-block;
+    cursor: pointer;
+    
 }
 .location-wrapper{
     display: inline-block;
@@ -374,10 +381,22 @@ header{
     font-size: 18px;
 }
 .google-translate{
-    display: block;
+    display: inline-block;
+    /*text-align: center;*/
+    padding: 20px;
+    /*padding-left: 30px;*/
+}
+.location-wrapper{
+    display: inline-block;
+    padding: 20px;    
+    
+    /*padding: 50px;*/
 }
 .location-div{
     display: block;
+    text-align: left;
+    /*padding: 20px;    */
+    /*padding-left: 30px;    */
 }
  .menu nav {
      display:none;
@@ -401,43 +420,11 @@ header{
     body{
         font-size:16px;
     }
-    /*.menu {
-        margin-top: 20px;
-    }
-    .menu a {
-        float: none;
-        margin: auto;
-    }
-    .menu li{
-        display: block;
-        width: 100%;
-        color: #39BB9D;
-    }
-    .menu a {
-        display: block;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        width: 100%;
-    }*/
+   
     .logo-link{
         display: block;
     }
-    /*menu-nav a:focus{
-        background-color: #39BB9D;
-        color: #fff;
-        background-size: cover;
-    }
-    .menu nav{
-        display: block;
-    }
-    .menu li :focus{
-        background-color: #39BB9D;
-        color: #fff;
-    }
-    .menu ul{
-        display: block;
-    }*/
-
+   
     .location-filter {
         display: block;
         width: 100%;
@@ -476,22 +463,59 @@ header{
 @media (max-width: 499px) {
  .logo-link-image{
     max-width: 100%;
+    margin-top: 10px;
 }
 .organisations-image img {
     width: 80%;
     max-width: 140px;
 }
+.google-translate{
+    display: block;
+    text-align: left;
+    padding:20px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.location-wrapper{
+    display: block;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 0px;
+    
+    text-align: left;
+}
+
+}
+@media (max-width: 656px) {
+ .logo-link-image{
+    margin-top: 10px;
+}
+.google-translate{
+    display: block;
+    text-align: left;
+    padding:20px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.location-wrapper{
+    display: block;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 0px;
+    
+    text-align: left;
+}
+.intro-div{
+    text-align: left;
+    padding-left: 20px;
+}
+
 }
 
 
-/*.goog-te-menu-frame{
-    width: 200px !important; 
-    height: 600px !important; 
-    /*top: 600px !important; 
-} */
-
 .goog-te-gadget {
     color: #f8f9fa!important;
+    margin-right: -40px !important;    
 }
 .goog-logo-link{
     display:none; 
@@ -499,18 +523,29 @@ header{
 }
 
 .goog-te-combo{
-    color:#39BB9D;
-    font-size: 18px;
+    color:#39BB9D !important;
+    font-size: 20px !important;
+    border: none;
+    width: 150px;
 }
+
 .goog-te-menu-value{
     color:#39BB9D;
 }
 .goog-te-gadget-simple{
     border: none !important;
     color:#39BB9D;
-    font-size: 16pt;
+    font-size: 16px;
 }
 
 .goog-te-gadget-icon{
     display: none;
+}
+.google-tra{
+    display: inline-block;
+}
+select{
+    border: none;
+    color:#39BB9D;
+    font-size:20px;
 }

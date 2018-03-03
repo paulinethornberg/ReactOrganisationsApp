@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexLink } from 'react-router'
 import HorizontalLogo from '../Images/Asylkompassen_Horizontal.png';
-import Location from './Location';
+// import Location from './Location';
 
 const Header = () => {
   return (
@@ -11,10 +11,10 @@ const Header = () => {
         <div className="container">
         <span className="logo-menu">
          <IndexLink className="logo-link" to="/">
-         <img className="logo-link-image" src={HorizontalLogo}/>
+         <img className="logo-link-image" alt="asylkompassen-logo" src={HorizontalLogo}/>
          </IndexLink>
          </span>
-          <nav role="navigation">
+          <nav>
            <ul className="menu-nav">
                <li>
                  <IndexLink to="/">Hem</IndexLink>
@@ -25,9 +25,7 @@ const Header = () => {
                 <li>
                  <IndexLink to="/about-us">Om Oss</IndexLink>
               </li>
-               <li>
-                   <Location/>
-              </li>
+             
           </ul>
           </nav>
          
@@ -40,6 +38,9 @@ const Header = () => {
 }
 
 export default Header;
+ //  <li>
+//      <Location/>
+// </li>
 
   // <li className="google-translate">
   //                  <div id="google_translate_element"></div>

@@ -55,9 +55,7 @@ class Organisation extends Component {
             if (tag.value.length === 0) {
                 return <span />
             }
-            console.log(tag);
             let tagValues = tag.value.map(x => x.name);
-            console.log(tagValues);
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag} tag={tag} />);
             });
@@ -126,7 +124,7 @@ class Organisation extends Component {
                                     <FontAwesome size='2x' name='facebook' />
                                 </div>
                                 <div className="organisation-contact-info-text">
-                                    {facebook}
+                                   <a target="_blank" href={facebook}>  {facebook}  </a>
                                 </div>
                             </div>
                             <div style={{display: phone ? 'block' : 'none' }}>

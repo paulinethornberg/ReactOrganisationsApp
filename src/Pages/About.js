@@ -4,18 +4,16 @@ import FontAwesome from 'react-fontawesome';
 
 let getState = () => {
   return {
-    aboutUs: OrganisationStore.getAboutUs()
+    about: OrganisationStore.getAboutUs()
   };
 };
 
 class About extends Component {
   state = {
-    about: {}
+    aboutUs: {}
   }
   constructor(props) {
     super(props);
-
-    // this.state = getState();
     this.onChange = this.onChange.bind(this);
   }
 
@@ -35,19 +33,24 @@ class About extends Component {
   }
 
   render() {
-    let about = this.state.aboutUs;
-    if (!about) {
+    if (!this.state.about) {
       return (
-        <div className="container"></div>
+        <div className="container">hello </div>
       );
-    } else {
-
+    } 
+      
+      let about = this.state.about;
+      if(!about.email){
+          return (
+        <div className="container">hello </div>
+      );
+      }
       let email = about.email.value;
       let description = about.description.value;
       return (
         <div className="container about-container">
           <div className="organisation-contact-info" >
-            <FontAwesome size='3x' name='envelope-o' />
+            <FontAwesome size='2x' name='envelope-o' />
           </div>
           <div className="organisation-contact-info-text">
             {email}
@@ -57,9 +60,7 @@ class About extends Component {
         </div>
 
       )
-    };
   }
-
 }
 
 export default About;

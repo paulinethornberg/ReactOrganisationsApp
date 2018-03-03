@@ -67,7 +67,7 @@ const CategoryFilter = (props) => {
 const CategoryFilterItem = (props) => {
   let categories = props.category.terms;
   let codename = props.category.codename;
-  let checked = props.filter.categories.includes(codename);
+  // let checked = props.filter.categories.includes(codename);
   let chosenFilter = OrganisationStore.getChosenFilter();
   if(chosenFilter === undefined) {
     let cookieValue = document.cookie.match(new RegExp("category" + '=([^;]+)'));
@@ -77,11 +77,11 @@ const CategoryFilterItem = (props) => {
     OrganisationStore.setChosenFilter(chosenFilter);
   }
   var icon = OrganisationStore.getIconForCategory(props.category.name);
-  let onChange = () => {
-    props.filter.toggleCategory(codename);
-    OrganisationStore.setFilter(props.filter);
-    chosenFilter = codename;
-  }
+  // let onChange = () => {
+  //   props.filter.toggleCategory(codename);
+  //   OrganisationStore.setFilter(props.filter);
+  //   chosenFilter = codename;
+  // }
         // <input id={codename} type="checkbox" checked={checked} onChange={onChange} />
         // <label htmlFor={codename}>{props.category.name}</label>
   if (codename === chosenFilter) {
@@ -113,8 +113,7 @@ const SubCategoryFilter = (props) => {
 }
 
 const SubCategoryFilterItem = (props) => {
-  let categories = props.category.name;
-  // console.log("this is props " + props.category.name);
+  // let categories = props.category.name;
   let codename = props.category.codename;
   let checked = props.filter.categories.includes(codename);
   let onChange = () => {

@@ -8,7 +8,7 @@ let organisationListCapacity = 0;
 let locations = ['hela_sverige'];
 let categories = [];
 // let chosenFilter = new String();
-// let chosenLocation = new String();
+let chosenLocation = new String();
 // let chosenCategory = new String();
 // let subCategories = [];
 

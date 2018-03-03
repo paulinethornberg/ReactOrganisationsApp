@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 import OrganisationStore from "../Stores/Organisation";
 import PeopleImage from '../Images/people.jpg';
-import FontAwesome from 'react-fontawesome';
 import Scroll from 'react-scroll';
 
 let getState = (isFiltered) => {
@@ -136,9 +135,7 @@ class Organisations extends Component {
 
     }
 }
-function mapOrganisations(organisations, index) {
 
-}
 const TagItem = (props) => {
     var style = {
         marginRight: '5px',

@@ -49,6 +49,7 @@ componentDidMount() {
       return {label: location.name, value: location.codename}
     });
     let chosenLocation = OrganisationStore.getChosenLocation();
+    var counter = 0;
 
 
     let dropdownStyle = {
@@ -58,11 +59,19 @@ componentDidMount() {
 
     return (
         <div className="location-div menu-location" >
-        <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
+         <FontAwesome name="map-marker"/>
+           <select value={chosenLocation} onChange={this.onLocationChange}>
+            {
+                options.map(item => <option value={item.value} label={item.label} key={item.value + 'a' + counter++}>{item.label}</option>)
+                })
+            }
+        </select>
+       
       </div>
     );
   }
 }
 export default Location;
 
-        // <FontAwesome name="map-marker" size="2x" />
+        //
+        //  <Dropdown  className="location-filter" style={dropdownStyle} options={options} onChange = {this.onLocationChange} value={chosenLocation} placeholder="Välj plats här" />
