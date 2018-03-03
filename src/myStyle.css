@@ -199,15 +199,20 @@ body{
     padding: 50px;
     font-size: 24px;
     cursor: pointer;
-    
+
 }
 select{
-    cursor: pointer;    
+    cursor: pointer;
+    border:none;
+    background-color:#fff;
+     /*-webkit-appearance: none;*/
+      -webkit-border-radius: 0px;
+      border-radius:0px;
 }
 .location-div{
     display: inline-block;
     cursor: pointer;
-    
+
 }
 .location-wrapper{
     display: inline-block;
@@ -388,8 +393,8 @@ header{
 }
 .location-wrapper{
     display: inline-block;
-    padding: 20px;    
-    
+    padding: 20px;
+
     /*padding: 50px;*/
 }
 .location-div{
@@ -420,11 +425,11 @@ header{
     body{
         font-size:16px;
     }
-   
+
     .logo-link{
         display: block;
     }
-   
+
     .location-filter {
         display: block;
         width: 100%;
@@ -481,7 +486,7 @@ header{
     padding: 20px;
     padding-left: 20px;
     padding-right: 0px;
-    
+
     text-align: left;
 }
 
@@ -502,7 +507,7 @@ header{
     padding: 20px;
     padding-left: 20px;
     padding-right: 0px;
-    
+
     text-align: left;
 }
 .intro-div{
@@ -515,10 +520,10 @@ header{
 
 .goog-te-gadget {
     color: #f8f9fa!important;
-    margin-right: -40px !important;    
+    margin-right: -40px !important;
 }
 .goog-logo-link{
-    display:none; 
+    display:none;
     color: white;
 }
 
