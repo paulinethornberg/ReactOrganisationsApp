@@ -107,9 +107,9 @@
 }
 .organisations-image img {
     height: auto;
-    width: 60%;
-    max-width:300px;
-    max-height:250px;
+    width: 50%;
+    max-width:200px;
+    max-height:200px;
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -471,22 +471,7 @@ header{
 .checkbox input {
     background-color: white;
 }
-.goog-te-gadget-simple{
-    color:#39BB9D;
-}
-.goog-te-menu-value{
-    color:#39BB9D;
 
-}
-.goog-te-gadget-simple{
-    border: none !important;
-    color:#39BB9D;
-    font-size: 16pt;
-}
-
-.goog-te-gadget-icon{
-    display: none;
-}
 
 @media (max-width: 499px) {
  .logo-link-image{
@@ -496,4 +481,36 @@ header{
     width: 80%;
     max-width: 140px;
 }
+}
+
+
+/*.goog-te-menu-frame{
+    width: 200px !important; 
+    height: 600px !important; 
+    /*top: 600px !important; 
+} */
+
+.goog-te-gadget {
+    color: #f8f9fa
+}
+.goog-logo-link{
+    display:none; 
+    color: white;
+}
+
+.goog-te-combo{
+    color:#39BB9D;
+    font-size: 18px;
+}
+.goog-te-menu-value{
+    color:#39BB9D;
+}
+.goog-te-gadget-simple{
+    border: none !important;
+    color:#39BB9D;
+    font-size: 16pt;
+}
+
+.goog-te-gadget-icon{
+    display: none;
 }
