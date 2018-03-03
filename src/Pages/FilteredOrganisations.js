@@ -8,6 +8,7 @@ const FilteredOrganisations = () => {
   let style = {
     display: 'block'
   }
+  let isFiltered = true;
 
   return (
     <div>
@@ -21,7 +22,7 @@ const FilteredOrganisations = () => {
         </div>
       <div>
         <div className="organisations-wrapper-div">
-          <Organisations />
+          <Organisations isFiltered={isFiltered} />
         </div>
       </div>
     </div>

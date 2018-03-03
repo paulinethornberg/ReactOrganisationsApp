@@ -52,14 +52,12 @@ class About extends Component {
           <div className="organisation-contact-info-text">
             {email}
           </div>
-
-
           <div dangerouslySetInnerHTML={{ __html: description }} >
-
           </div>
         </div>
 
-      )};
+      )
+    };
   }
 
 }

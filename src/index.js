@@ -7,6 +7,7 @@ import './myStyle.css';
 import App from './App';
 import HomePage from './Pages/Home';
 import OrganisationPage from './Pages/Organisation';
+import AllOrganisationsPage from './Pages/AllOrganisations';
 import AboutPage from './Pages/About';
 import Category from './Components/Category';
 import FilteredOrganisations from './Pages/FilteredOrganisations'
@@ -20,6 +21,7 @@ ReactDOM.render((
         <Route name="categories" path="categories" component={Category} />
         </IndexRoute>
       <Route name="organsiations" path="organisations" component={FilteredOrganisations} />
+      <Route name="all-organsiations" path="all-organisations" component={AllOrganisationsPage} />
       <Route name= "organisation" path="organisations/:organisationSlug" component={OrganisationPage} />
       <Route name= "about" path="about-us" component={AboutPage} />
     </Route>

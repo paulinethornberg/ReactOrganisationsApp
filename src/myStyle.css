@@ -31,7 +31,7 @@
     padding-top:10px;
     background-color:#f8f9fa;
     /*background-color:white;*/
-    
+
 }
 .organisation-image {
     width: 300px;
@@ -58,35 +58,35 @@
 .organiastion-contact-wrapper {
     margin-bottom: 40px;
     margin-top: 30px;
-} 
+}
 
 /*ORGANISATIONS PAGE*/
 .organisations-page {
     display: inline-block;
     margin-top: 1.25rem;
     text-align: center;
-   
+
     width:25%;
     /*float: none; */
 }
 
 .organisations-page {
-     height: 500px;
+     height: 400px;
 }
 
 @media (max-width: 1110px) {
-    .organisations-page { 
+    .organisations-page {
         width:50%
     }
     /*.back-arrow{
     display: none;
 }*/
-    
+
 }
 
 .organisations-page h1{
    color: #005B89;
-   
+
    font-size: 20px;
    font-weight: 600;
 }
@@ -108,7 +108,7 @@
 .organisations-image img {
     height: auto;
     width: 60%;
-    max-width: 250px;
+    max-width:300px;
     max-height:250px;
     display:block;
     margin-left: auto;
@@ -186,11 +186,11 @@ body{
     font-size: 14px;
 }
 .Dropdown-option{
-    
+
     margin: -50px;
     margin-right: 0px;
     font-size: 14px;
-    
+
 
 }
 
@@ -209,19 +209,19 @@ body{
 .location-language-selector-wrapper{
     margin-left:auto;
     margin-right:auto;
-    text-align: center; 
+    text-align: center;
     background-color:#f8f9fa;
 }
 .intro-div{
     background-color:#f8f9fa;
-    text-align: center;    
+    text-align: center;
     padding-top: 40px;
 }
 
 .container{
-    width: 100%;    
+    width: 100%;
     margin: 0 auto;
-    
+
 }
 .container-organsiation{
     width: 70%;
@@ -239,13 +239,13 @@ body{
     background-color: #f8f9fa;
     /*background-color: white;*/
     padding-top: 20px;
-    border: solid #f8f9fa 10px; 
+    border: solid #f8f9fa 10px;
 }
 .subcategories{
     padding-bottom: 150px;
     display: block;
-    font-size: 14px; 
-    padding-left: 15%; 
+    font-size: 14px;
+    padding-left: 15%;
     padding-right: 5%;
 }
 .about-container{
@@ -270,7 +270,7 @@ body{
 }
 .location-home-div{
     font-size: 24px;
-} 
+}
 /*-------footer-------*/
 .copyright{
     font-size: 14px;
@@ -306,12 +306,18 @@ body{
     padding-right:2%;
 }
 }
+
+@media (max-width: 1072px) {
+    .logo-menu a{
+        padding-left: 2%;
+    }
+}
 @media (min-width: 767px){
      .float-left{
     float: left;
 }
 }
-@media (max-width: 848px) {
+@media (max-width: 966px) {
  .logo-link-image{
     max-width: 60%;
 }
@@ -325,8 +331,8 @@ body{
 .logo-link{
     margin-bottom: -30px;
 }
-.menu-location{
-    display: none;
+.location-filter{
+    padding: 0;
 }
 li{
     padding-left: 30px;
@@ -335,11 +341,7 @@ header{
     margin-bottom: 10px;
 }
 }
-@media (max-width: 499px) {
- .logo-link-image{
-    max-width: 100%;
-}
-}
+
 @media (max-width: 1023px){
         .category-wrapper{
         width: 50%;
@@ -352,8 +354,18 @@ header{
       padding-bottom: 0px;
   }
     .subcategories{
-    padding-left: 5%; 
+    padding-left: 5%;
     padding-right: 2%;
+}
+.organisation-tags{
+    display: none;
+}
+.organisations-image img {
+    width: 50%;
+    max-width: 140px;
+}
+.organisations-page{
+ height: 220px;
 }
 .about-container{
     width: 90%;
@@ -438,23 +450,23 @@ header{
     .category-div{
         padding-top: 20px;
         padding-bottom: 20px;
-  
+
 }
-        
-    
+
+
     .category-wrapper{
         width: 50%;
         display: inline-block;
         margin: auto;
     }
-   
+
 }
 
 
 .checkbox {
     margin-top: 20px;
     color: #005B89;
-    font-weight: 500;    
+    font-weight: 500;
 }
 .checkbox input {
     background-color: white;
@@ -464,11 +476,11 @@ header{
 }
 .goog-te-menu-value{
     color:#39BB9D;
-    
+
 }
 .goog-te-gadget-simple{
     border: none !important;
-    color:#39BB9D;    
+    color:#39BB9D;
     font-size: 16pt;
 }
 
@@ -476,32 +488,12 @@ header{
     display: none;
 }
 
-/*body{
-    background-color: #f8f9fa;
+@media (max-width: 499px) {
+ .logo-link-image{
+    max-width: 100%;
 }
-.menu{
-    background-color: #f8f9fa;    
-}*/
-/*.google-translate {
-    margin-top:20px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-}*/
-
-/*.checkbox input {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}*/
-
-/*#google_translate_element {
-    position: absolute; 
-    padding: 40px 0px;
-    padding-left: 20%;
-}*/
+.organisations-image img {
+    width: 80%;
+    max-width: 140px;
+}
+}

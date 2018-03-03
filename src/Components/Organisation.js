@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 import FontAwesome from 'react-fontawesome';
 import OrganisationStore from '../Stores/Organisation';
-import dateFormat from 'dateformat';
 import PeopleImage from '../Images/people.jpg';
 import Scroll from 'react-scroll';
 
@@ -72,7 +71,7 @@ class Organisation extends Component {
 
         }
 
-        let location = renderTags(organisation.location);
+        // let location = renderTags(organisation.location);
         let category = renderTags(organisation.category);
         let title = organisation.name.value;
         let imageLink = PeopleImage;

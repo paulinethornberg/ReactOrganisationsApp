@@ -62,9 +62,9 @@ const CategoryFilter = (props) => {
 }
 
 const CategoryFilterItem = (props) => {
-  let categories = props.category.terms;
+  // let categories = props.category.terms;
   let codename = props.category.codename;
-  let checked = props.filter.categories.includes(codename);
+  // let checked = props.filter.categories.includes(codename);
   var icon = OrganisationStore.getIconForCategory(props.category.name);
   let onChange = () => {
     OrganisationStore.resetMainCategoryFilter();
@@ -72,7 +72,7 @@ const CategoryFilterItem = (props) => {
     OrganisationStore.setFilter(props.filter);
     OrganisationStore.setChosenFilter(codename);
     document.cookie = "category="+ codename;
-    var x = document.cookie;
+    // var x = document.cookie;
   }
 
    let innerDiv = {

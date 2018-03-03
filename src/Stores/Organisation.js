@@ -7,10 +7,10 @@ let organisationDetails = {};
 let organisationListCapacity = 0;
 let locations = ['hela_sverige'];
 let categories = [];
-let chosenFilter = new String();
-let chosenLocation = new String();
-let chosenCategory = new String();
-let subCategories = [];
+// let chosenFilter = new String();
+// let chosenLocation = new String();
+// let chosenCategory = new String();
+// let subCategories = [];
 
 let notifyChange = () => {
   changeListeners.forEach((listener) => {
@@ -40,7 +40,7 @@ export class Filter {
   constructor() {
     this.locations = [];
     this.categories = [];
-    this.chosenCategory = new String();
+    // this.chosenCategory = new String();
 
   }
  matches(organisation) {

@@ -5,7 +5,8 @@ import PeopleImage from '../Images/people.jpg';
 import FontAwesome from 'react-fontawesome';
 import Scroll from 'react-scroll';
 
-let getState = () => {
+let getState = (isFiltered) => {
+    // console.log(isFiltered);
     return {
         organisations: OrganisationStore.getOrganisations(),
         filter: OrganisationStore.getFilter(),
@@ -17,14 +18,15 @@ class Organisations extends Component {
 
     constructor(props) {
         super(props);
-        this.state = getState();
+        var isFiltered = this.props.isFiltered;
+        this.state = getState(isFiltered);
         this.onChange = this.onChange.bind(this);
     }
 
     componentDidMount() {
         OrganisationStore.addChangeListener(this.onChange);
         OrganisationStore.provideOrganisations();
-         Scroll.Events.scrollEvent.register('begin', function(to, element) {
+        Scroll.Events.scrollEvent.register('begin', function (to, element) {
             console.log("begin", arguments);
         });
     }
@@ -48,10 +50,10 @@ class Organisations extends Component {
             let tags = tagValues.map((tag) => {
                 return (<TagItem key={tag + counter++} tag={tag} />);
             });
-            if(tags.length > 8){
-                tags = tags.slice(0,8);
+            if (tags.length > 8) {
+                tags = tags.slice(0, 8);
             }
-             return (
+            return (
                 <span >
                     {tags}
                 </span>
@@ -63,22 +65,20 @@ class Organisations extends Component {
             return this.state.filter.matches(organisation);
         };
 
-        let organisations = this.state.organisations.filter(filter).map((organisation, index) => {
-            let name = organisation.name.value;
-            let imageLink = PeopleImage;
-            if (organisation.image.value.length > 0) {
-                imageLink = organisation.image.value[0].url;
-            }
+        if (this.props.isFiltered) {
+            let organisations = this.state.organisations.filter(filter).map((organisation, index) => {
+                let name = organisation.name.value;
+                let imageLink = PeopleImage;
+                if (organisation.image.value.length > 0) {
+                    imageLink = organisation.image.value[0].url;
+                }
+                let category = renderTags(organisation.category);
+                let link = "organisations/" + organisation.slug.value;
+                Scroll.animateScroll.scrollTo(450);
 
-
-            // let location = renderTags(organisation.location);
-            let category = renderTags(organisation.category);
-            let link = "organisations/" + organisation.slug.value;
-            Scroll.animateScroll.scrollTo(450);
-
-            return (
-                <div className="organisations-page col-sm-6 col-md-3 col-xs-6" key={index}>
-                        <Link to={link} params={{organisationSlug: {name}}}>
+                return (
+                    <div className="organisations-page col-sm-6 col-md-3 col-xs-6" key={index}>
+                        <Link to={link} params={{ organisationSlug: { name } }}>
                             <figure className="organisations-image">
                                 <img alt={name} className="" src={imageLink} title={name} />
                             </figure>
@@ -90,18 +90,55 @@ class Organisations extends Component {
                                 </span>
                             </div>
                         </Link>
+                    </div>
+                );
+            });
+            return (
+                <div>
+                    {organisations}
+                </div>
+            );
+        }
+
+        let organisations = this.state.organisations.map((organisation, index) => {
+            let name = organisation.name.value;
+            let imageLink = PeopleImage;
+            if (organisation.image.value.length > 0) {
+                imageLink = organisation.image.value[0].url;
+            }
+            let category = renderTags(organisation.category);
+            let link = "organisations/" + organisation.slug.value;
+            Scroll.animateScroll.scrollTo(450);
+
+            return (
+                <div className="organisations-page col-sm-6 col-md-3 col-xs-6" key={index}>
+                    <Link to={link} params={{ organisationSlug: { name } }}>
+                        <figure className="organisations-image">
+                            <img alt={name} className="" src={imageLink} title={name} />
+                        </figure>
+                        <h1 className="notranslate">{name}</h1>
+
+                        <div className="organisation-tags">
+                            <span>
+                                {category}
+                            </span>
+                        </div>
+                    </Link>
                 </div>
             );
         });
-
         return (
             <div>
                 {organisations}
             </div>
         );
+
+
     }
 }
+function mapOrganisations(organisations, index) {
 
+}
 const TagItem = (props) => {
     var style = {
         marginRight: '5px',
@@ -110,7 +147,7 @@ const TagItem = (props) => {
         marginBottom: '5px',
     }
     return (
-       <span style={style} className=" organisation-listings-tags-status">
+        <span style={style} className=" organisation-listings-tags-status">
             {props.tag},
         </span>
     );

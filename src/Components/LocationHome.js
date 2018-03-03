@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router'
 import OrganisationStore from '../Stores/Organisation';
 import Dropdown from 'react-dropdown';
-import FontAwesome from 'react-fontawesome';
 import BubblesImage from '../Images/bubbles.jpg';
 
 let getState = () => {
